@@ -2,6 +2,14 @@
     "$schema": "http://json-schema.org/draft-07/schema",
     "title": "Data file for the resume generator",
     "type": "object",
-    "properties": {}
+    "properties": {
+        "firstName": {
+            "type": "string"
+        },
+        "lastName": {
+            "type": "string"
+        }
+    },
+    "required": ["firstName", "lastName"]
   }
   

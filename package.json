@@ -17,8 +17,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "build-parser": "$(cd parser && tsc)",
+    "parse": "node parser/build/parser",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm run parse && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --ignore-path .eslintignore --ext .js,.ts",
