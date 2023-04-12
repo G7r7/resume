@@ -23,3 +23,7 @@ if(!validData) {
         console.log(error)
     }
 }
+
+if(!validConfig || !validData) {
+    process.exit(1)
+}
