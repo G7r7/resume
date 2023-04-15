@@ -5,7 +5,10 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-export interface ConfigurationFileForTheResumeGenerator {
+/**
+ * Configuration file for the resume generator
+ */
+export interface Config {
   language: "fr" | "en";
   [k: string]: unknown;
 }

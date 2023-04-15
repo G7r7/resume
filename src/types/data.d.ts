@@ -5,7 +5,10 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-export interface DataFileForTheResumeGenerator {
+/**
+ * Data file for the resume generator
+ */
+export interface Data {
   firstName: string;
   lastName: string;
   [k: string]: unknown;
