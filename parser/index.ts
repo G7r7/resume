@@ -10,8 +10,6 @@ if (process.argv.length != 4) {
     process.exit(1)
 }
 
-console.log(process.cwd())
-
 const configPath = process.argv[2]
 const dataPath = process.argv[3]
 
