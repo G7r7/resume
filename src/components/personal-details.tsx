@@ -1,6 +1,7 @@
 import React from 'react';
 import { config, data } from '..';
 import { Lang } from '../types/lang';
+import './personal-details.scss';
 
 type Words = 'firstName' | 'lastName' | 'phone' | 'email';
 
@@ -26,7 +27,7 @@ const lang: Lang<Words> = {
 export class PersonalDetails extends React.Component {
   render(): React.ReactNode {
     return (
-      <>
+      <div className="personal-details">
         <div>
           {lang.firstName[config.language]} {data.firstName}
         </div>
@@ -39,7 +40,7 @@ export class PersonalDetails extends React.Component {
         <div>
           {lang.email[config.language]} {data.email}
         </div>
-      </>
+      </div>
     );
   }
 }
