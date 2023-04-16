@@ -1,7 +1,7 @@
 import { compileFromFile } from 'json-schema-to-typescript'
 import fs from 'fs'
 
-const usage = 'usage: type-maker <config-schema-path> <data-schema-path> <out-dir-path>'
+const usage = 'usage: types-maker <config-schema-path> <data-schema-path> <out-dir-path>'
 
 if (process.argv.length != 5) {
     console.log(usage)

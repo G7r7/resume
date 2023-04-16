@@ -18,10 +18,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "build-types-maker": "$(cd schemas && tsc)",
-    "make-types": "node schemas/build/ schemas/config.json schemas/data.json src/types",
-    "build-parser": "$(cd parser && tsc)",
-    "parse": "node parser/build/parser src/config/config.json src/config/data.json",
+    "types": "$(cd types-maker && tsc) && node types-maker/build/ src/schemas/config.json src/schemas/data.json src/types",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
