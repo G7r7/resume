@@ -6,15 +6,12 @@
   "image": "mcr.microsoft.com/devcontainers/typescript-node:0-18",
   "features": {
     "ghcr.io/devcontainers/features/git:1": {}
-},
-"customizations": {
-	"vscode": {
-		"extensions": [
-			"dbaeumer.vscode-eslint",
-			"esbenp.prettier-vscode"
-		]
-	}
-}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+    }
+  }
 
   // Features to add to the dev container. More info: https://containers.dev/features.
   // "features": {},

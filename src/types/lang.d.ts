@@ -1,5 +1,5 @@
-import { Config } from "./config"
+export type languages = 'en' | 'fr';
 
-export type Words = string[]
+export type Words = string[];
 
-export type Lang<Words> = Record<Words, Record<Config["language"], string>>
+export type Lang<Words> = Record<Words, Record<languages, string>>;

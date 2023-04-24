@@ -10,6 +10,7 @@
     "@types/node": "^16.18.23",
     "@types/react": "^18.0.33",
     "@types/react-dom": "^18.0.11",
+    "moment": "^2.29.4",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -19,7 +20,6 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "types": "$(cd types-maker && tsc) && node types-maker/build/ src/schemas/config.json src/schemas/data.json src/types",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -50,7 +50,6 @@
     "@typescript-eslint/parser": "^5.58.0",
     "eslint": "^8.38.0",
     "eslint-plugin-react": "^7.32.2",
-    "json-schema-to-typescript": "^12.0.0",
     "prettier": "2.8.7"
   }
 }
