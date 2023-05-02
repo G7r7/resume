@@ -23,14 +23,39 @@ export class ProfessionalExperiences extends React.Component {
           return (
             <div key={experience.companyName}>
               <div>
-                {experience.companyName} - {experience.city}
-              </div>
-              <div>{experience.jobTitle[config.language]}</div>
-              <div>
-                {moment(experience.startDate).format('MM/YYYY')} -{' '}
+                <b>
+                  {experience.companyName} - {experience.city}
+                </b>{' '}
+                - {moment(experience.startDate).format('MM/YYYY')} -{' '}
                 {moment(experience.endDate).format('MM/YYYY')}
               </div>
+              <div>{experience.jobTitle[config.language]}</div>
               <div>{experience.description[config.language]}</div>
+              {experience.projects.map((project) => {
+                return (
+                  <div key={project.name}>
+                    <div>
+                      {project.name} - {project.type.name[config.language]}
+                    </div>
+                    <div>
+                      {project.roles.map((role) => {
+                        return (
+                          <div key={role.name[config.language]}>
+                            {role.name[config.language]}
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <div>
+                      {project.technologies.map((technology) => {
+                        return (
+                          <div key={technology.name}>{technology.name}</div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           );
         })}

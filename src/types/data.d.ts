@@ -17,5 +17,25 @@ export type Data = {
     endDate: Date;
     jobTitle: Record<languages, string>;
     description: Record<languages, string>;
+    projects: Project[];
   }[];
+};
+
+type Project = {
+  name: string;
+  type: ProjectType;
+  technologies: Technology[];
+  roles: Role[];
+};
+
+type Technology = {
+  name: string;
+};
+
+type Role = {
+  name: Record<languages, string>;
+};
+
+type ProjectType = {
+  name: Record<languages, string>;
 };
