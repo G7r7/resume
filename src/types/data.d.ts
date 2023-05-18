@@ -26,6 +26,7 @@ type Project = {
   type: ProjectType;
   technologies: Technology[];
   roles: Role[];
+  description: Record<languages, string>;
 };
 
 type Technology = {
