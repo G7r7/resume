@@ -1,0 +1,11 @@
+@use '../../sizes.scss' as sizes;
+
+.technology {
+    display: flex;
+    align-items: center;
+    gap: sizes.$size0;
+}
+
+.tech-logo {
+    height: sizes.$size5;
+}
