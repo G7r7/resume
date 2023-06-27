@@ -1,0 +1,8 @@
+@use '../../sizes.scss' as sizes;
+
+.technologies {
+  display: flex;
+  flex-direction: row;
+  gap: sizes.$size1;
+  flex-wrap: wrap;
+}

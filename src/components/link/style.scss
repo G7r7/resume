@@ -1,0 +1,11 @@
+@use '../../sizes.scss' as sizes;
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: sizes.$size0;
+}
+
+.logo {
+  height: sizes.$size5;
+}

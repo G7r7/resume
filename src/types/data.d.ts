@@ -12,6 +12,7 @@ export type Data = {
     email: string;
   };
   profesionalExperiences: ProfessionalExperience[];
+  personalProjects: PersonalProject[];
 };
 
 export type ProfessionalExperience = {
@@ -22,7 +23,7 @@ export type ProfessionalExperience = {
   jobTitle: Record<languages, string>;
   description: Record<languages, string>;
   projects: Project[];
-}
+};
 
 type Project = {
   name: string;
@@ -33,9 +34,23 @@ type Project = {
   technologies: Technology[];
 };
 
+type PersonalProject = {
+  name: string;
+  description: Record<languages, string>;
+  type: ProjectType;
+  technologies: Technology[];
+  website?: string;
+  sourceCode?: string;
+};
+
 type Technology = {
   name: string;
-  logo: ReactComponentElement
+  logo: ReactComponentElement;
+};
+
+export type Concept = {
+  name: Record<languages, string>;
+  logo: ReactComponentElement;
 };
 
 type Role = {

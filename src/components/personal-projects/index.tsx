@@ -3,6 +3,7 @@ import { Lang } from '../../types/lang';
 import { data } from '../../config/data';
 import { config } from '../../config/config';
 import './style.scss';
+import { PersonalProject } from '../personal-project';
 
 type Words = 'title';
 
@@ -18,6 +19,9 @@ export class PersonalProjects extends React.Component {
     return (
       <div className="personal-projects">
         <h2>{lang.title[config.language]}</h2>
+        {data.personalProjects.map((project, index) => {
+          return <PersonalProject key={index} project={project} />;
+        })}
       </div>
     );
   }
