@@ -1,5 +1,4 @@
 import React from 'react';
-import { data } from '../../config/data';
 import { config } from '../../config/config';
 import { PersonalProject as PersonalProj } from '../../types/data';
 import './style.scss';
@@ -22,16 +21,27 @@ export class PersonalProject extends React.Component<Props> {
         {(() => {
           if (this.props.project.sourceCode) {
             return (
-              <Link
-                logo={SOURCECODE.logo}
-                url={this.props.project.sourceCode}
-              />
+              <div>
+                <Link
+                  logo={SOURCECODE.logo}
+                  url={this.props.project.sourceCode}
+                  text={this.props.project.sourceCode}
+                />
+              </div>
             );
           }
         })()}
         {(() => {
           if (this.props.project.website) {
-            return <Link logo={WEB.logo} url={this.props.project.website} />;
+            return (
+              <div>
+                <Link
+                  logo={WEB.logo}
+                  url={this.props.project.website}
+                  text={this.props.project.website}
+                />
+              </div>
+            );
           }
         })()}
         <div>{this.props.project.description[config.language]}</div>

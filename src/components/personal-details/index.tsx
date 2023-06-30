@@ -3,6 +3,7 @@ import { data } from '../../config/data';
 import { config } from '../../config/config';
 import { Lang } from '../../types/lang';
 import './style.scss';
+import { Link } from '../link';
 
 type Words = 'title' | 'firstName' | 'lastName' | 'phone' | 'email';
 
@@ -44,7 +45,11 @@ export class PersonalDetails extends React.Component {
           {lang.phone[config.language]} {data.personalDetails.phone}
         </div>
         <div>
-          {lang.email[config.language]} {data.personalDetails.email}
+          {lang.email[config.language]}{' '}
+          <Link
+            url={'mailto:' + data.personalDetails.email}
+            text={data.personalDetails.email}
+          />
         </div>
       </div>
     );

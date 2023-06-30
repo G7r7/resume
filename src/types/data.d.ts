@@ -13,6 +13,7 @@ export type Data = {
   };
   profesionalExperiences: ProfessionalExperience[];
   personalProjects: PersonalProject[];
+  technicalSkills: TechnicalSkill[];
 };
 
 export type ProfessionalExperience = {
@@ -52,6 +53,13 @@ export type Concept = {
   name: Record<languages, string>;
   logo: ReactComponentElement;
 };
+
+type TechnicalSkill = {
+  technology: Technology;
+  level: Level;
+};
+
+type Level = 0 | 1 | 2 | 3 | 4 | 5;
 
 type Role = {
   name: Record<languages, string>;

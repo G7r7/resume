@@ -3,16 +3,25 @@ import './style.scss';
 
 interface Props {
   url: string;
-  logo: React.FC<React.SVGProps<SVGSVGElement>>;
+  logo?: React.FC<React.SVGProps<SVGSVGElement>>;
+  text: string;
 }
 
 export class Link extends React.Component<Props> {
   render(): React.ReactNode {
     return (
       <div className="link">
-        <this.props.logo className="logo" />{' '}
+        {(() => {
+          if (this.props.logo !== undefined) {
+            return (
+              <>
+                <this.props.logo className="logo" />{' '}
+              </>
+            );
+          }
+        })()}
         <a href={this.props.url} target="_blank" rel="noreferrer">
-          {this.props.url}
+          {this.props.text}
         </a>
       </div>
     );

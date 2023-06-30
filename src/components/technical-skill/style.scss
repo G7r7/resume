@@ -1,11 +1,7 @@
 @use '../../sizes.scss' as sizes;
 
-.link {
-  display: inline-flex;
+.technical-skill {
+  display: flex;
   align-items: center;
   gap: sizes.$size0;
-}
-
-.logo {
-  height: sizes.$size5;
 }

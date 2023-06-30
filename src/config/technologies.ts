@@ -32,6 +32,8 @@ import { ReactComponent as VSCODELogo } from '../assets/technologies/logos/vscod
 import { ReactComponent as VRLogo } from '../assets/technologies/logos/vr.svg';
 import { ReactComponent as CPPLogo } from '../assets/technologies/logos/cplusplus.svg';
 import { ReactComponent as RASPBERRYPILogo } from '../assets/technologies/logos/raspberrypi.svg';
+import { ReactComponent as PYTHONLogo } from '../assets/technologies/logos/python.svg';
+import { ReactComponent as JAVALogo } from '../assets/technologies/logos/java.svg';
 
 export const VSCODE: Technology = {
   name: 'Visual Studio Code',
@@ -196,4 +198,14 @@ export const VR: Technology = {
 export const RASPBERRYPI: Technology = {
   name: 'Raspberry Pi',
   logo: RASPBERRYPILogo,
+};
+
+export const JAVA: Technology = {
+  name: 'Java',
+  logo: JAVALogo,
+};
+
+export const PYTHON: Technology = {
+  name: 'Python',
+  logo: PYTHONLogo,
 };
