@@ -18,8 +18,8 @@ const lang: Lang<Words> = {
 export class TechnicalSkills extends Component {
   render(): React.ReactNode {
     return (
-      <div className="technical-skills">
-        <h2>{lang.title[config.language]}</h2>
+      <div className="box technical-skills">
+        <div className="section-title">{lang.title[config.language]}</div>
         {data.technicalSkills
           .sort((sk1, sk2) => (sk1.level < sk2.level ? 1 : -1))
           .map((technicalSkill, index) => {

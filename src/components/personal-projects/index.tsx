@@ -17,11 +17,13 @@ const lang: Lang<Words> = {
 export class PersonalProjects extends React.Component {
   render(): React.ReactNode {
     return (
-      <div className="personal-projects">
-        <h2>{lang.title[config.language]}</h2>
-        {data.personalProjects.map((project, index) => {
-          return <PersonalProject key={index} project={project} />;
-        })}
+      <div className="box personal-projects">
+        <div className="section-title">{lang.title[config.language]}</div>
+        <div className="vertical-group-container">
+          {data.personalProjects.map((project, index) => {
+            return <PersonalProject key={index} project={project} />;
+          })}
+        </div>
       </div>
     );
   }

@@ -1,0 +1,36 @@
+@use './colors.scss' as colors;
+@use './sizes.scss' as sizes;
+
+html {
+  margin: 0;
+  padding: sizes.$size1;
+  background-color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.section-title {
+  font-size: sizes.$size5;
+}
+
+.box {
+  background: linear-gradient(90deg, colors.$color10, colors.$color9);
+  padding: sizes.$size1;
+  border-radius: sizes.$size1;
+  border: 1px solid colors.$color1;
+}
+
+.vertical-group-container {
+  display: flex;
+  flex-direction: column;
+  gap: sizes.$size1;
+}
+
+.horizontal-group-container {
+  display: flex;
+  flex-direction: row;
+  gap: sizes.$size1;
+}

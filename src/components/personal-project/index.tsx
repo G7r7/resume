@@ -13,7 +13,7 @@ interface Props {
 export class PersonalProject extends React.Component<Props> {
   render(): React.ReactNode {
     return (
-      <div className="personal-project">
+      <div className="box personal-project">
         <div>
           {this.props.project.name} -{' '}
           {this.props.project.type.name[config.language]}

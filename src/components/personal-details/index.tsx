@@ -2,6 +2,7 @@ import React from 'react';
 import { data } from '../../config/data';
 import { config } from '../../config/config';
 import { Lang } from '../../types/lang';
+import '../../style.scss';
 import './style.scss';
 import { Link } from '../link';
 
@@ -33,8 +34,8 @@ const lang: Lang<Words> = {
 export class PersonalDetails extends React.Component {
   render(): React.ReactNode {
     return (
-      <div className="personal-details">
-        <h2>{lang.title[config.language]}</h2>
+      <div className="box personal-details">
+        <div className="section-title">{lang.title[config.language]}</div>
         <div>
           {lang.firstName[config.language]} {data.personalDetails.firstName}
         </div>

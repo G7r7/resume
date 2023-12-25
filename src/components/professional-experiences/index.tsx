@@ -17,13 +17,15 @@ const lang: Lang<Words> = {
 export class ProfessionalExperiences extends React.Component {
   render(): React.ReactNode {
     return (
-      <div className="professional-experiences">
-        <h2>{lang.title[config.language]}</h2>
-        {data.profesionalExperiences.map((experience, index) => {
-          return (
-            <ProfessionalExperience key={index} experience={experience}/>
-          );
-        })}
+      <div className="box professional-experiences">
+        <div className="section-title">{lang.title[config.language]}</div>
+        <div className="vertical-group-container">
+          {data.profesionalExperiences.map((experience, index) => {
+            return (
+              <ProfessionalExperience key={index} experience={experience} />
+            );
+          })}
+        </div>
       </div>
     );
   }

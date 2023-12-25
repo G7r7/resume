@@ -15,13 +15,13 @@ export class Project extends React.Component<Props> {
 
   render(): React.ReactNode {
     return (
-      <div key={this.props.project.name} className="project">
+      <div key={this.props.project.name} className="box project">
         <div>
           {this.props.project.name} -{' '}
           {this.props.project.type.name[config.language]}
         </div>
         <div>{this.props.project.description[config.language]}</div>
-        <div>
+        <div className="horizontal-group-container">
           {this.props.project.roles.map((role) => {
             return (
               <div key={role.name[config.language]}>

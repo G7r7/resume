@@ -2,7 +2,7 @@ import React from 'react';
 // import { Lang } from '../../types/lang';
 // import { data } from '../../config/data';
 import { config } from '../../config/config';
-import { ProfessionalExperience as Exp } from '../../types/data'
+import { ProfessionalExperience as Exp } from '../../types/data';
 import moment from 'moment';
 import './style.scss';
 import { Project } from '../project';
@@ -17,7 +17,7 @@ import { Project } from '../project';
 // };
 
 interface Props {
-  experience: Exp
+  experience: Exp;
 }
 
 export class ProfessionalExperience extends React.Component<Props> {
@@ -27,20 +27,23 @@ export class ProfessionalExperience extends React.Component<Props> {
 
   render(): React.ReactNode {
     return (
-    <div key={this.props.experience.companyName} className='professional-experience' >
-      <div>
-        <b>
-          {this.props.experience.companyName} - {this.props.experience.city}
-        </b>{' '}
-        - {moment(this.props.experience.startDate).format('MM/YYYY')} -{' '}
-        {moment(this.props.experience.endDate).format('MM/YYYY')}
+      <div
+        key={this.props.experience.companyName}
+        className="box professional-experience"
+      >
+        <div>
+          <b>
+            {this.props.experience.companyName} - {this.props.experience.city}
+          </b>{' '}
+          - {moment(this.props.experience.startDate).format('MM/YYYY')} -{' '}
+          {moment(this.props.experience.endDate).format('MM/YYYY')}
+        </div>
+        <div>{this.props.experience.jobTitle[config.language]}</div>
+        <div>{this.props.experience.description[config.language]}</div>
+        {this.props.experience.projects.map((project, index) => {
+          return <Project key={index} project={project} />;
+        })}
       </div>
-      <div>{this.props.experience.jobTitle[config.language]}</div>
-      <div>{this.props.experience.description[config.language]}</div>
-      {this.props.experience.projects.map((project, index) => {
-        return <Project key={index} project={project} />
-      })}
-    </div>
     );
   }
 }
