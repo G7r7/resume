@@ -15,7 +15,7 @@
       "repositories": {
         "g7r7/resume-data": {
           "permissions": {
-            "issues": "write"
+            "contents": "write"
           }
         }
       }
@@ -29,7 +29,7 @@
   // "forwardPorts": [],
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "npm i && npm start",
+  "postCreateCommand": "npm i && npm start"
 
   // Configure tool-specific properties.
   // "customizations": {},
