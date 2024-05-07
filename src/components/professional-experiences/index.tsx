@@ -1,7 +1,7 @@
 import React from 'react';
 import { Lang } from '../../types/lang';
-import { data } from '../../config/data';
-import { config } from '../../config/config';
+import { data } from '../../data/data';
+import { config } from '../../data/config';
 import './style.scss';
 import { ProfessionalExperience } from '../professional-experience';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { config } from '../../config/config';
+import { config } from '../../data/config';
 import { Project as Proj } from '../../types/data';
 import './style.scss';
 import { Technologies } from '../technologies';
@@ -31,7 +31,7 @@ export class Project extends React.Component<Props> {
           })}
         </div>
         {this.props.project.tasks.map((task, index) => {
-          return <div key={index}>{task[config.language]}</div>;
+          return <div key={index}>{'• ' + task[config.language]}</div>;
         })}
         <Technologies technologies={this.props.project.technologies} />
       </div>

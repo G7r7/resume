@@ -1,6 +1,6 @@
 import React from 'react';
-import { data } from '../../config/data';
-import { config } from '../../config/config';
+import { data } from '../../data/data';
+import { config } from '../../data/config';
 import { Lang } from '../../types/lang';
 import '../../style.scss';
 import './style.scss';

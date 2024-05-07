@@ -1,5 +1,5 @@
 import React from 'react';
-import { config } from '../../config/config';
+import { config } from '../../data/config';
 import { PersonalProject as PersonalProj } from '../../types/data';
 import './style.scss';
 import { Technologies } from '../technologies';

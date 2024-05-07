@@ -1,9 +1,9 @@
 import { Component } from 'react';
 import React from 'react';
-import { config } from '../../config/config';
+import { config } from '../../data/config';
 import { Lang } from '../../types/lang';
 import './style.scss';
-import { data } from '../../config/data';
+import { data } from '../../data/data';
 import { TechnicalSkill } from '../technical-skill';
 
 type Words = 'title';
