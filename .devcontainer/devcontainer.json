@@ -10,6 +10,15 @@
   "customizations": {
     "vscode": {
       "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+    },
+    "codespaces": {
+      "repositories": {
+        "g7r7/resume-data": {
+          "permissions": {
+            "issues": "write"
+          }
+        }
+      }
     }
   }
 
