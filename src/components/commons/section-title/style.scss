@@ -2,7 +2,7 @@
 @import '../../../sizes.scss';
 @import '../../../colors.scss';
 
-@for $i from 1 to length($sizes) {
+@for $i from 1 to length($sizes) + 1 {
   $base-size: nth($sizes, $i);
 
   .section-title-#{$i} {
@@ -19,7 +19,7 @@
   }
 
   .section-title-#{$i}.section-title-badge {
-    background-color: $color4;
+    background-color: $color11;
     padding: calc($base-size / 5) calc($base-size / 1.5);
     border-radius: calc($base-size);
     color: $color10;
@@ -31,7 +31,7 @@
   }
 }
 
-@for $i from 1 to length($colors) {
+@for $i from 1 to length($colors) + 1 {
   $color: nth($colors, $i);
   [class^="section-title-"].section-title-badge.section-title-badge-color-#{$i} {
     background-color: $color;
