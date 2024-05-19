@@ -1,5 +1,6 @@
 import { ReactComponentElement } from 'react';
 import { languages } from './lang';
+import { ColorIndex } from './colors';
 
 /**
  * Data file for the resume generator
@@ -67,4 +68,5 @@ type Role = {
 
 type ProjectType = {
   name: Record<languages, string>;
+  color?: ColorIndex;
 };

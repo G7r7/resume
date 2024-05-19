@@ -12,4 +12,5 @@ export const INTEGRATION: ProjectType = {
     en: 'Software Integration',
     fr: 'Intégration logicielle',
   },
+  color: 6
 };

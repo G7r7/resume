@@ -5,6 +5,7 @@ import { Lang } from '../../types/lang';
 import '../../style.scss';
 import './style.scss';
 import { Link } from '../link';
+import { SectionTitle } from '../commons/section-title';
 
 type Words = 'title' | 'firstName' | 'lastName' | 'phone' | 'email';
 
@@ -35,7 +36,9 @@ export class PersonalDetails extends React.Component {
   render(): React.ReactNode {
     return (
       <div className="box personal-details">
-        <div className="section-title">{lang.title[config.language]}</div>
+        <SectionTitle logo={NAMELogo} badge={{}}>
+          {lang.title[config.language]}
+        </SectionTitle>
         <div>
           {lang.firstName[config.language]} {data.personalDetails.firstName}
         </div>

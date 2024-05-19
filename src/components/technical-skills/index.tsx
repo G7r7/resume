@@ -5,6 +5,8 @@ import { Lang } from '../../types/lang';
 import './style.scss';
 import { data } from '../../data/data';
 import { TechnicalSkill } from '../technical-skill';
+import { SectionTitle } from '../commons/section-title';
+import { ReactComponent as TOOLSlogo } from '../../assets/images/concepts/tools.svg';
 
 type Words = 'title';
 
@@ -19,7 +21,9 @@ export class TechnicalSkills extends Component {
   render(): React.ReactNode {
     return (
       <div className="box technical-skills">
-        <div className="section-title">{lang.title[config.language]}</div>
+        <SectionTitle badge={{}} logo={TOOLSlogo}>
+          {lang.title[config.language]}
+        </SectionTitle>
         {data.technicalSkills
           .sort((sk1, sk2) => (sk1.level < sk2.level ? 1 : -1))
           .map((technicalSkill, index) => {

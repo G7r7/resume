@@ -3,6 +3,7 @@ import { config } from '../../data/config';
 import { Project as Proj } from '../../types/data';
 import './style.scss';
 import { Technologies } from '../technologies';
+import { SectionTitle } from '../commons/section-title';
 
 interface Props {
   project: Proj;
@@ -16,9 +17,22 @@ export class Project extends React.Component<Props> {
   render(): React.ReactNode {
     return (
       <div key={this.props.project.name} className="box project">
-        <div>
-          {this.props.project.name} -{' '}
-          {this.props.project.type.name[config.language]}
+        <div
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '1rem',
+          }}
+        >
+          <SectionTitle badge={{ color: 3 }} size={4}>
+            {this.props.project.name}
+          </SectionTitle>
+          <SectionTitle
+            badge={{ color: this.props.project.type.color }}
+            size={4}
+          >
+            {this.props.project.type.name[config.language]}
+          </SectionTitle>{' '}
         </div>
         <div>{this.props.project.description[config.language]}</div>
         <div className="horizontal-group-container">
