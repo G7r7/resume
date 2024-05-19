@@ -1,0 +1,40 @@
+@use 'sass:list';
+@import '../../../sizes.scss';
+@import '../../../colors.scss';
+
+@for $i from 1 to length($sizes) {
+  $base-size: nth($sizes, $i);
+
+  .section-title-#{$i} {
+    font-size: $base-size;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: calc($base-size / 3);
+  }
+
+  .section-title-#{$i}.section-logo svg {
+    height: calc($base-size * 1);
+    width: calc($base-size * 1);
+  }
+
+  .section-title-#{$i}.section-title-badge {
+    background-color: $color4;
+    padding: calc($base-size / 5) calc($base-size / 1.5);
+    border-radius: calc($base-size);
+    color: $color10;
+  }
+
+  .section-title-#{$i}.section-title-badge.section-logo  {
+    padding: calc($base-size / 5) calc($base-size / 1.5);
+    padding-left: calc($base-size / 3);
+  }
+}
+
+@for $i from 1 to length($colors) {
+  $color: nth($colors, $i);
+  [class^="section-title-"].section-title-badge.section-title-badge-color-#{$i} {
+    background-color: $color;
+    color: if(lightness($color) > 40%, mix(black, $color, 85%), mix(white, $color, 100%));
+  }
+}
