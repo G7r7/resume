@@ -6,6 +6,7 @@ import '../../style.scss';
 import './style.scss';
 import { Link } from '../link';
 import { SectionTitle } from '../commons/section-title';
+import { ReactComponent as NAMELogo } from '../../assets/images/concepts/name.svg';
 
 type Words = 'title' | 'firstName' | 'lastName' | 'phone' | 'email';
 

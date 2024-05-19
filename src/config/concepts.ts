@@ -1,6 +1,7 @@
 import { Concept } from '../types/data';
 import { ReactComponent as WEBLogo } from '../assets/images/concepts/web.svg';
 import { ReactComponent as SOURCECODELogo } from '../assets/images/concepts/sourcecode.svg';
+import { ReactComponent as WORKLogo } from '../assets/images/concepts/work.svg';
 
 export const WEB: Concept = {
   name: {
@@ -16,4 +17,12 @@ export const SOURCECODE: Concept = {
     fr: 'Code source',
   },
   logo: SOURCECODELogo,
+};
+
+export const WORK: Concept = {
+  name: {
+    en: 'Work',
+    fr: 'Travail',
+  },
+  logo: WORKLogo,
 };
