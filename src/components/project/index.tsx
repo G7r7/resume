@@ -6,6 +6,7 @@ import { Technologies } from '../technologies';
 import { SectionTitle } from '../commons/section-title';
 import { Link } from '../link';
 import { SOURCECODE, WEB } from '../../config/concepts';
+import { Technology } from '../technology';
 
 interface Props {
   project: Proj;
@@ -23,7 +24,7 @@ export class Project extends React.Component<Props> {
           style={{
             display: 'inline-flex',
             alignItems: 'center',
-            gap: '1rem',
+            gap: '0.6rem',
           }}
         >
           <SectionTitle badge={{ color: 3 }} size={4}>
@@ -35,10 +36,16 @@ export class Project extends React.Component<Props> {
           >
             {this.props.project.type.name[config.language]}
           </SectionTitle>{' '}
-          <Technologies technologies={this.props.project.technologies} />
+          {this.props.project.technologies.map((technology, index) => {
+            return (
+              <SectionTitle key={index} size={4} badge={{color: 10}}>
+                <Technology technology={technology} key={index} />
+              </SectionTitle>
+            );
+          })}
         </div>
         <div>{this.props.project.description[config.language]}</div>
-        {(() => {
+        {/* {(() => {
           if (this.props.project.roles) { return (
             <div className="horizontal-group-container">
               {this.props.project.roles.map((role) => {
@@ -50,7 +57,7 @@ export class Project extends React.Component<Props> {
               })}
             </div>)
           }
-        })()}
+        })()} */}
         {this.props.project.tasks
           ? this.props.project.tasks.map((task, index) => {
               return <div key={index}>{'• ' + task[config.language]}</div>;

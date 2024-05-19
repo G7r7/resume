@@ -38,9 +38,14 @@ type Project = {
   sourceCode?: string;
 };
 
+type TechnologyCategory = {
+  name: Record<languages, string>;
+};
+
 type Technology = {
   name: string;
   logo: ReactComponentElement;
+  category: TechnologyCategory
 };
 
 export type Concept = {

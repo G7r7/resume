@@ -1,5 +1,14 @@
 @use '../../colors.scss' as colors;
+@use 'sass:list';
+@import '../../sizes.scss';
 
 .technical-skills {
-  background-color: colors.$color8;
+  display: flex;
+  flex-direction: row;
+}
+
+.technical-skills > div:not(:last-child) {
+  border-right: 1px solid black;
+  padding-right: nth($sizes, 4);
+  margin-right: nth($sizes, 4);
 }

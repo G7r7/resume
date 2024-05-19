@@ -11,9 +11,7 @@ export class Technologies extends React.Component<Props> {
   render(): React.ReactNode {
     return (
       <div className="technologies">
-        {this.props.technologies.map((technology, index) => {
-          return <Technology technology={technology} key={index} />;
-        })}
+
       </div>
     );
   }
