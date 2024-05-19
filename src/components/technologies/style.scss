@@ -2,7 +2,7 @@
 @import '../../sizes.scss';
 
 .technologies {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   gap: list.nth($sizes, 2);
   flex-wrap: wrap;

@@ -33,6 +33,7 @@ export class Project extends React.Component<Props> {
           >
             {this.props.project.type.name[config.language]}
           </SectionTitle>{' '}
+          <Technologies technologies={this.props.project.technologies} />
         </div>
         <div>{this.props.project.description[config.language]}</div>
         <div className="horizontal-group-container">
@@ -47,7 +48,6 @@ export class Project extends React.Component<Props> {
         {this.props.project.tasks.map((task, index) => {
           return <div key={index}>{'• ' + task[config.language]}</div>;
         })}
-        <Technologies technologies={this.props.project.technologies} />
       </div>
     );
   }
