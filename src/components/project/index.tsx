@@ -4,6 +4,8 @@ import { Project as Proj } from '../../types/data';
 import './style.scss';
 import { Technologies } from '../technologies';
 import { SectionTitle } from '../commons/section-title';
+import { Link } from '../link';
+import { SOURCECODE, WEB } from '../../config/concepts';
 
 interface Props {
   project: Proj;
@@ -36,18 +38,50 @@ export class Project extends React.Component<Props> {
           <Technologies technologies={this.props.project.technologies} />
         </div>
         <div>{this.props.project.description[config.language]}</div>
-        <div className="horizontal-group-container">
-          {this.props.project.roles.map((role) => {
+        {(() => {
+          if (this.props.project.roles) { return (
+            <div className="horizontal-group-container">
+              {this.props.project.roles.map((role) => {
+                return (
+                  <div key={role.name[config.language]}>
+                    {role.name[config.language]}
+                  </div>
+                );
+              })}
+            </div>)
+          }
+        })()}
+        {this.props.project.tasks
+          ? this.props.project.tasks.map((task, index) => {
+              return <div key={index}>{'• ' + task[config.language]}</div>;
+            })
+          : null}
+        {(() => {
+          if (this.props.project.sourceCode) {
             return (
-              <div key={role.name[config.language]}>
-                {role.name[config.language]}
+              <div>
+                <Link
+                  logo={SOURCECODE.logo}
+                  url={this.props.project.sourceCode}
+                  text={this.props.project.sourceCode}
+                />
               </div>
             );
-          })}
-        </div>
-        {this.props.project.tasks.map((task, index) => {
-          return <div key={index}>{'• ' + task[config.language]}</div>;
-        })}
+          }
+        })()}
+        {(() => {
+          if (this.props.project.website) {
+            return (
+              <div>
+                <Link
+                  logo={WEB.logo}
+                  url={this.props.project.website}
+                  text={this.props.project.website}
+                />
+              </div>
+            );
+          }
+        })()}
       </div>
     );
   }

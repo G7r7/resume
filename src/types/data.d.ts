@@ -32,14 +32,7 @@ type Project = {
   description: Record<languages, string>;
   type: ProjectType;
   roles: Role[];
-  tasks: Record<languages, string>[];
-  technologies: Technology[];
-};
-
-type PersonalProject = {
-  name: string;
-  description: Record<languages, string>;
-  type: ProjectType;
+  tasks?: Record<languages, string>[];
   technologies: Technology[];
   website?: string;
   sourceCode?: string;
