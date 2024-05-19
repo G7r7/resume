@@ -1,9 +1,12 @@
 @use './colors.scss' as colors;
-@use './sizes.scss' as sizes;
+@use 'sass:list';
+@import './sizes.scss';
+
+$base-size: list.nth($sizes, 2);
 
 html {
   margin: 0;
-  padding: sizes.$size1;
+  padding: $base-size;
   background-color: white;
 }
 
@@ -12,25 +15,21 @@ body {
   padding: 0;
 }
 
-.section-title {
-  font-size: sizes.$size5;
-}
-
 .box {
   background: linear-gradient(90deg, colors.$color10, colors.$color9);
-  padding: sizes.$size1;
-  border-radius: sizes.$size1;
+  padding: $base-size;
+  border-radius: $base-size;
   border: 1px solid colors.$color1;
 }
 
 .vertical-group-container {
   display: flex;
   flex-direction: column;
-  gap: sizes.$size1;
+  gap: $base-size;
 }
 
 .horizontal-group-container {
   display: flex;
   flex-direction: row;
-  gap: sizes.$size1;
+  gap: $base-size;
 }

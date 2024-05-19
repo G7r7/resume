@@ -1,8 +1,9 @@
-@use '../../sizes.scss' as sizes;
+@use 'sass:list';
+@import '../../sizes.scss';
 
 .technologies {
   display: flex;
   flex-direction: row;
-  gap: sizes.$size1;
+  gap: list.nth($sizes, 2);
   flex-wrap: wrap;
 }

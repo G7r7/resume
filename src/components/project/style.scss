@@ -1,7 +1,8 @@
-@use '../../colors.scss' as colors;
-@use '../../sizes.scss' as sizes;
+@use 'sass:list';
+@import '../../colors.scss';
+@import '../../sizes.scss';
 
 .project {
-  background-color: colors.$color5;
-  margin-top: sizes.$size1;
+  background-color: $color5;
+  margin-top: nth($sizes, 2);
 }
