@@ -1,4 +1,5 @@
 @use './colors.scss' as colors;
+@use './assets/fonts/JetBrainsMono-2.304/style.scss'; 
 @use 'sass:list';
 @import './sizes.scss';
 
@@ -8,6 +9,7 @@ html {
   margin: 0;
   padding: $base-size;
   background-color: white;
+  font-family: 'JetBrains Mono';
 }
 
 body {
