@@ -29,11 +29,11 @@ const lang: Lang<Words> = {
 export class TechnicalSkills extends Component {
   render(): React.ReactNode {
     return (
-      <div className="box">
+      <div className="box vertical-group-container">
         <SectionTitle badge={{}} logo={TOOLSlogo}>
           {lang.title[config.language]}
         </SectionTitle>
-        <div className="technical-skills">
+        <div className="technical-skills horizontal-group-container">
           <TechnicalSkillCategory category={PROGRAMMINGLANGUAGE} />
           <TechnicalSkillCategory category={WEBTECH} />
           <TechnicalSkillCategory category={DEVTOOL} />
@@ -58,17 +58,22 @@ class TechnicalSkillCategory extends Component<TechnicalSkillCategoryProps> {
       );
       if (programmingLanguages.length > 0) {
         return (
-          <div>
-            <SectionTitle>
+          <div className="vertical-group-container">
+            <SectionTitle size={4}>
               {this.props.category.name[config.language]}
             </SectionTitle>
-            {programmingLanguages
-              .sort((sk1, sk2) => (sk1.level < sk2.level ? 1 : -1))
-              .map((technicalSkill, index) => {
-                return (
-                  <TechnicalSkill key={index} technicalSkill={technicalSkill} />
-                );
-              })}
+            <div>
+              {programmingLanguages
+                .sort((sk1, sk2) => (sk1.level < sk2.level ? 1 : -1))
+                .map((technicalSkill, index) => {
+                  return (
+                    <TechnicalSkill
+                      key={index}
+                      technicalSkill={technicalSkill}
+                    />
+                  );
+                })}
+            </div>
           </div>
         );
       }

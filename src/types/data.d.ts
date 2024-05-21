@@ -15,6 +15,19 @@ export type Data = {
   profesionalExperiences: ProfessionalExperience[];
   personalProjects: PersonalProject[];
   technicalSkills: TechnicalSkill[];
+  studies: Study[];
+};
+
+export type Study = {
+  school: {
+    name: Record<languages, string>;
+    city: string;
+  };
+  diploma: {
+    name: Record<languages, string>;
+  };
+  startDate: Date;
+  endDate: Date;
 };
 
 export type ProfessionalExperience = {

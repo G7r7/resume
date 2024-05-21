@@ -1,0 +1,8 @@
+@use 'sass:list';
+@import '../../colors.scss';
+@import '../../sizes.scss';
+
+.study {
+  background-color: $color5;
+  margin-top: nth($sizes, 2);
+}

@@ -19,7 +19,7 @@ const lang: Lang<Words> = {
 export class ProfessionalExperiences extends React.Component {
   render(): React.ReactNode {
     return (
-      <div className="box professional-experiences">
+      <div className="box professional-experiences vertical-group-container">
         <SectionTitle logo={WORKLogo} badge={{}}>
           {lang.title[config.language]}
         </SectionTitle>

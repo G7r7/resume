@@ -36,25 +36,27 @@ const lang: Lang<Words> = {
 export class PersonalDetails extends React.Component {
   render(): React.ReactNode {
     return (
-      <div className="box personal-details">
+      <div className="box personal-details vertical-group-container">
         <SectionTitle logo={NAMELogo} badge={{}}>
           {lang.title[config.language]}
         </SectionTitle>
         <div>
-          {lang.firstName[config.language]} {data.personalDetails.firstName}
-        </div>
-        <div>
-          {lang.lastName[config.language]} {data.personalDetails.lastName}
-        </div>
-        <div>
-          {lang.phone[config.language]} {data.personalDetails.phone}
-        </div>
-        <div>
-          {lang.email[config.language]}{' '}
-          <Link
-            url={'mailto:' + data.personalDetails.email}
-            text={data.personalDetails.email}
-          />
+          <div>
+            {lang.firstName[config.language]} {data.personalDetails.firstName}
+          </div>
+          <div>
+            {lang.lastName[config.language]} {data.personalDetails.lastName}
+          </div>
+          <div>
+            {lang.phone[config.language]} {data.personalDetails.phone}
+          </div>
+          <div>
+            {lang.email[config.language]}{' '}
+            <Link
+              url={'mailto:' + data.personalDetails.email}
+              text={data.personalDetails.email}
+            />
+          </div>
         </div>
       </div>
     );

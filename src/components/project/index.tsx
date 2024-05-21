@@ -19,14 +19,8 @@ export class Project extends React.Component<Props> {
 
   render(): React.ReactNode {
     return (
-      <div key={this.props.project.name} className="box project">
-        <div
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '0.6rem',
-          }}
-        >
+      <div key={this.props.project.name} className="box project vertical-group-container">
+        <div className='horizontal-group-container'>
           <SectionTitle badge={{ color: 3 }} size={4}>
             {this.props.project.name}
           </SectionTitle>
