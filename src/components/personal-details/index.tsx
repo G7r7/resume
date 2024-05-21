@@ -7,6 +7,7 @@ import './style.scss';
 import { Link } from '../link';
 import { SectionTitle } from '../commons/section-title';
 import { ReactComponent as NAMELogo } from '../../assets/images/concepts/name.svg';
+import PHOTO from '../../data/photo.jpg';
 
 type Words = 'title' | 'firstName' | 'lastName' | 'phone' | 'email';
 
@@ -40,23 +41,40 @@ export class PersonalDetails extends React.Component {
         <SectionTitle logo={NAMELogo} badge={{}}>
           {lang.title[config.language]}
         </SectionTitle>
-        <div>
-          <div>
-            {lang.firstName[config.language]} {data.personalDetails.firstName}
+        <div
+          className="horizontal-group-container"
+          style={{ justifyContent: 'space-between' }}
+        >
+          <div className="vertical-group-container">
+            <div>
+              {lang.firstName[config.language]} {data.personalDetails.firstName}
+            </div>
+            <div>
+              {lang.lastName[config.language]} {data.personalDetails.lastName}
+            </div>
+            <div>
+              {lang.phone[config.language]} {data.personalDetails.phone}
+            </div>
+            <div>
+              {lang.email[config.language]}{' '}
+              <Link
+                url={'mailto:' + data.personalDetails.email}
+                text={data.personalDetails.email}
+              />
+            </div>
+            {data.personalDetails.socials.map((social, index) => {
+              return (
+                <Link
+                  logo={social.logo}
+                  key={index}
+                  text={social.text}
+                  url={social.link}
+                />
+              );
+            })}
           </div>
-          <div>
-            {lang.lastName[config.language]} {data.personalDetails.lastName}
-          </div>
-          <div>
-            {lang.phone[config.language]} {data.personalDetails.phone}
-          </div>
-          <div>
-            {lang.email[config.language]}{' '}
-            <Link
-              url={'mailto:' + data.personalDetails.email}
-              text={data.personalDetails.email}
-            />
-          </div>
+          <div></div>
+          <img className="details-photo" src={PHOTO} />
         </div>
       </div>
     );

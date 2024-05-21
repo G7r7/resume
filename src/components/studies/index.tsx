@@ -20,7 +20,7 @@ const lang: Lang<Words> = {
 export class Studies extends Component {
   render(): React.ReactNode {
     return (
-      <div className="box">
+      <div className="box vertical-group-container">
         <SectionTitle badge={{}} logo={TOOLSlogo}>
           {lang.title[config.language]}
         </SectionTitle>

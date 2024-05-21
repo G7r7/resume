@@ -29,7 +29,7 @@ export class ProfessionalExperience extends React.Component<Props> {
     return (
       <div
         key={this.props.experience.companyName}
-        className="box professional-experience"
+        className="box professional-experience vertical-group-container"
       >
         <div>
           <b>

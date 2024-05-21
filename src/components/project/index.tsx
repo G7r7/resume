@@ -2,7 +2,6 @@ import React from 'react';
 import { config } from '../../data/config';
 import { Project as Proj } from '../../types/data';
 import './style.scss';
-import { Technologies } from '../technologies';
 import { SectionTitle } from '../commons/section-title';
 import { Link } from '../link';
 import { SOURCECODE, WEB } from '../../config/concepts';
@@ -38,7 +37,7 @@ export class Project extends React.Component<Props> {
             );
           })}
         </div>
-        <div>{this.props.project.description[config.language]}</div>
+        <div><i>{this.props.project.description[config.language]}</i></div>
         {/* {(() => {
           if (this.props.project.roles) { return (
             <div className="horizontal-group-container">

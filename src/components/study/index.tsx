@@ -25,14 +25,14 @@ export class Study extends React.Component<Props> {
           <SectionTitle logo={DIPLOMALogo} size={4}>
             {this.props.study.diploma.name[config.language]}
           </SectionTitle>
-          <SectionTitle badge={{}} size={3}>
+          <SectionTitle badge={{}} size={4}>
             {moment(this.props.study.startDate).format('YYYY')} -{' '}
             {moment(this.props.study.endDate).format('YYYY')}
           </SectionTitle>
-          <SectionTitle badge={{}} size={3}>
+          <SectionTitle badge={{}} size={4}>
             {this.props.study.school.name[config.language]}
           </SectionTitle>
-          <SectionTitle badge={{}} size={3}>{this.props.study.school.city}</SectionTitle>
+          <SectionTitle badge={{}} size={4}>{this.props.study.school.city}</SectionTitle>
         </div>
       </div>
     );

@@ -11,11 +11,19 @@ export type Data = {
     lastName: string;
     phone: string;
     email: string;
+    socials: Social[]
   };
   profesionalExperiences: ProfessionalExperience[];
   personalProjects: PersonalProject[];
   technicalSkills: TechnicalSkill[];
   studies: Study[];
+};
+
+export type Social = {
+  logo: ReactComponentElement;
+  name: string;
+  link: string;
+  text: string;
 };
 
 export type Study = {
