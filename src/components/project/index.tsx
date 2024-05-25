@@ -26,12 +26,11 @@ export class Project extends React.Component<Props> {
           <SectionTitle badge={{ color: 3 }} size={4}>
             {this.props.project.name}
           </SectionTitle>
-          <SectionTitle
-            badge={{ color: this.props.project.type.color }}
-            size={4}
-          >
-            {this.props.project.type.name[config.language]}
-          </SectionTitle>{' '}
+          {this.props.project.type.map((t, index) => (
+            <SectionTitle key={index} badge={{ color: t.color }} size={4}>
+              {t.name[config.language]}
+            </SectionTitle>
+          ))}
           {this.props.project.technologies.map((technology, index) => {
             return (
               <SectionTitle key={index} size={4} badge={{ color: 10 }}>

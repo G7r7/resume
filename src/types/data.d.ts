@@ -15,7 +15,7 @@ export type Data = {
     text: Record<languages, string>;
   };
   profesionalExperiences: ProfessionalExperience[];
-  personalProjects: PersonalProject[];
+  personalProjects: Project[];
   technicalSkills: TechnicalSkill[];
   studies: Study[];
 };
@@ -53,7 +53,7 @@ export type ProfessionalExperience = {
 type Project = {
   name: string;
   description: Record<languages, string>;
-  type: ProjectType;
+  type: ProjectType[];
   roles: Role[];
   tasks?: Record<languages, string>[];
   technologies: Technology[];
