@@ -59,7 +59,7 @@ class TechnicalSkillCategory extends Component<TechnicalSkillCategoryProps> {
       if (programmingLanguages.length > 0) {
         return (
           <div className="vertical-group-container">
-            <SectionTitle size={4} badge={{}}>
+            <SectionTitle size={4} badge={{}} fitContent={true}>
               {this.props.category.name[config.language]}
             </SectionTitle>
             <div>

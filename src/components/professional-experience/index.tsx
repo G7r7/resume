@@ -51,7 +51,7 @@ export class ProfessionalExperience extends React.Component<Props> {
         className="box professional-experience vertical-group-container"
       >
         <div className="horizontal-group-container">
-          <SectionTitle logo={this.props.experience.logo} badge={{ color: 9}} size={4}>
+          <SectionTitle logo={this.props.experience.logo} badge={{}} size={4}>
             {this.props.experience.companyName}
           </SectionTitle>
           <SectionTitle badge={{}} size={4}>
