@@ -1,20 +1,24 @@
 import React from 'react';
-// import { Lang } from '../../types/lang';
-// import { data } from '../../config/data';
 import { config } from '../../data/config';
 import { ProfessionalExperience as Exp } from '../../types/data';
 import moment from 'moment';
 import './style.scss';
 import { Project } from '../project';
+import { SectionTitle } from '../commons/section-title';
+import { Lang } from '../../types/lang';
 
-// type Words = 'title';
+type Words = 'years' | 'months';
 
-// const lang: Lang<Words> = {
-//   title: {
-//     en: 'Professional Experience',
-//     fr: 'Expérience professionelle',
-//   },
-// };
+const lang: Lang<Words> = {
+  years: {
+    en: 'years',
+    fr: 'ans',
+  },
+  months: {
+    en: 'months',
+    fr: 'mois',
+  },
+};
 
 interface Props {
   experience: Exp;
@@ -25,18 +29,41 @@ export class ProfessionalExperience extends React.Component<Props> {
     super(props);
   }
 
+  humanDateDiff(date1: Date, date2: Date): string {
+    const moment1 = moment(date1);
+    const moment2 = moment(date2);
+
+    const years = moment1.diff(moment2, 'year');
+    moment2.add(years, 'years');
+
+    const months = moment1.diff(moment2, 'months');
+    moment2.add(months, 'months');
+
+    return `${years.toString()} ${lang.years[config.language]}${ 
+      months > 0 ? ` ${months.toString()} ${lang.months[config.language]}` : ''
+    }`;
+  }
+
   render(): React.ReactNode {
     return (
       <div
         key={this.props.experience.companyName}
         className="box professional-experience vertical-group-container"
       >
-        <div>
-          <b>
-            {this.props.experience.companyName} - {this.props.experience.city}
-          </b>{' '}
-          - {moment(this.props.experience.startDate).format('MM/YYYY')} -{' '}
-          {moment(this.props.experience.endDate).format('MM/YYYY')}
+        <div className="horizontal-group-container">
+          <SectionTitle logo={this.props.experience.logo} badge={{ color: 9}} size={4}>
+            {this.props.experience.companyName}
+          </SectionTitle>
+          <SectionTitle badge={{}} size={4}>
+            {moment(this.props.experience.startDate).format('MM/YYYY')} →{' '}
+            {moment(this.props.experience.endDate).format('MM/YYYY')}
+            {' ('}
+            {this.humanDateDiff(
+              this.props.experience.endDate,
+              this.props.experience.startDate
+            )}
+            {')'}
+          </SectionTitle>
         </div>
         <div>{this.props.experience.jobTitle[config.language]}</div>
         <div>{this.props.experience.description[config.language]}</div>

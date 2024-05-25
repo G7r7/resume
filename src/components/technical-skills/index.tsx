@@ -6,7 +6,7 @@ import './style.scss';
 import { data } from '../../data/data';
 import { TechnicalSkill } from '../technical-skill';
 import { SectionTitle } from '../commons/section-title';
-import { ReactComponent as TOOLSlogo } from '../../assets/images/concepts/tools.svg';
+import TOOLSlogo from '../../assets/images/concepts/tools.svg';
 import {
   DEVTOOL,
   FRAMEWORK,
@@ -59,7 +59,7 @@ class TechnicalSkillCategory extends Component<TechnicalSkillCategoryProps> {
       if (programmingLanguages.length > 0) {
         return (
           <div className="vertical-group-container">
-            <SectionTitle size={4}>
+            <SectionTitle size={4} badge={{}}>
               {this.props.category.name[config.language]}
             </SectionTitle>
             <div>

@@ -15,9 +15,9 @@ root.render(
   <React.StrictMode>
     <div className="vertical-group-container">
       <PersonalDetails />
+      <TechnicalSkills />
       <ProfessionalExperiences />
       <PersonalProjects />
-      <TechnicalSkills />
       <Studies />
     </div>
   </React.StrictMode>

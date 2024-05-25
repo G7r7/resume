@@ -3,7 +3,7 @@ import { config } from '../../data/config';
 import { Study as Stud } from '../../types/data';
 import './style.scss';
 import { SectionTitle } from '../commons/section-title';
-import { ReactComponent as DIPLOMALogo } from '../../assets/images/concepts/diploma-2.svg';
+import DIPLOMALogo from '../../assets/images/concepts/diploma-2.svg';
 import moment from 'moment';
 
 interface Props {
@@ -21,7 +21,7 @@ export class Study extends React.Component<Props> {
         key={this.props.study.diploma.name[config.language]}
         className="box study"
       >
-        <div className='horizontal-group-container'>
+        <div className="horizontal-group-container">
           <SectionTitle logo={DIPLOMALogo} size={4}>
             {this.props.study.diploma.name[config.language]}
           </SectionTitle>
@@ -32,7 +32,9 @@ export class Study extends React.Component<Props> {
           <SectionTitle badge={{}} size={4}>
             {this.props.study.school.name[config.language]}
           </SectionTitle>
-          <SectionTitle badge={{}} size={4}>{this.props.study.school.city}</SectionTitle>
+          <SectionTitle badge={{}} size={4}>
+            {this.props.study.school.city}
+          </SectionTitle>
         </div>
       </div>
     );

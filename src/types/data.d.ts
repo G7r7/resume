@@ -11,7 +11,8 @@ export type Data = {
     lastName: string;
     phone: string;
     email: string;
-    socials: Social[]
+    socials: Social[];
+    text: Record<languages, string>;
   };
   profesionalExperiences: ProfessionalExperience[];
   personalProjects: PersonalProject[];
@@ -39,6 +40,7 @@ export type Study = {
 };
 
 export type ProfessionalExperience = {
+  logo?: ReactComponentElement;
   companyName: string;
   city: string;
   startDate: Date;

@@ -18,8 +18,11 @@ export class Project extends React.Component<Props> {
 
   render(): React.ReactNode {
     return (
-      <div key={this.props.project.name} className="box project vertical-group-container">
-        <div className='horizontal-group-container'>
+      <div
+        key={this.props.project.name}
+        className="box project vertical-group-container"
+      >
+        <div className="horizontal-group-container">
           <SectionTitle badge={{ color: 3 }} size={4}>
             {this.props.project.name}
           </SectionTitle>
@@ -31,13 +34,15 @@ export class Project extends React.Component<Props> {
           </SectionTitle>{' '}
           {this.props.project.technologies.map((technology, index) => {
             return (
-              <SectionTitle key={index} size={4} badge={{color: 10}}>
+              <SectionTitle key={index} size={4} badge={{ color: 10 }}>
                 <Technology technology={technology} key={index} />
               </SectionTitle>
             );
           })}
         </div>
-        <div><i>{this.props.project.description[config.language]}</i></div>
+        <div>
+          <i>{this.props.project.description[config.language]}</i>
+        </div>
         {/* {(() => {
           if (this.props.project.roles) { return (
             <div className="horizontal-group-container">

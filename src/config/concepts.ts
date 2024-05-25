@@ -1,7 +1,7 @@
 import { Concept } from '../types/data';
-import { ReactComponent as WEBLogo } from '../assets/images/concepts/web.svg';
-import { ReactComponent as SOURCECODELogo } from '../assets/images/concepts/sourcecode.svg';
-import { ReactComponent as WORKLogo } from '../assets/images/concepts/work.svg';
+import WEBLogo from '../assets/images/concepts/web.svg';
+import SOURCECODELogo from '../assets/images/concepts/sourcecode.svg';
+import WORKLogo from '../assets/images/concepts/work.svg';
 
 export const WEB: Concept = {
   name: {

@@ -5,7 +5,7 @@ import { Lang } from '../../types/lang';
 import './style.scss';
 import { data } from '../../data/data';
 import { SectionTitle } from '../commons/section-title';
-import { ReactComponent as TOOLSlogo } from '../../assets/images/concepts/school.svg';
+import TOOLSlogo from '../../assets/images/concepts/school.svg';
 import { Study } from '../study';
 
 type Words = 'title';

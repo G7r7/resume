@@ -1,11 +1,10 @@
 import './style.scss';
 import React, { PropsWithChildren } from 'react';
-import { ReactComponentLike } from 'prop-types';
 import { ColorIndex } from '../../../types/colors';
 import { SizeIndex } from '../../../types/sizes';
 
 interface Props extends PropsWithChildren {
-  logo?: ReactComponentLike;
+  logo?: string;
   badge?: {
     color?: ColorIndex;
   };
@@ -24,7 +23,7 @@ export class SectionTitle extends React.Component<Props> {
             : null
         }`}
       >
-        {this.props.logo ? <this.props.logo /> : null}
+        {this.props.logo ? <img src={this.props.logo} /> : null}
         {this.props.children}
       </div>
     );

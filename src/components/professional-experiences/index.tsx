@@ -5,7 +5,7 @@ import { config } from '../../data/config';
 import './style.scss';
 import { ProfessionalExperience } from '../professional-experience';
 import { SectionTitle } from '../commons/section-title';
-import { ReactComponent as WORKLogo } from '../../assets/images/concepts/work.svg';
+import WORKLogo from '../../assets/images/concepts/work.svg';
 
 type Words = 'title';
 
