@@ -7,7 +7,7 @@ import { Project } from '../project';
 import { SectionTitle } from '../commons/section-title';
 import { Lang } from '../../types/lang';
 
-type Words = 'years' | 'months';
+type Words = 'years' | 'months' | 'today';
 
 const lang: Lang<Words> = {
   years: {
@@ -18,6 +18,10 @@ const lang: Lang<Words> = {
     en: 'months',
     fr: 'mois',
   },
+  today: {
+    en: 'today',
+    fr: 'à ce jour'
+  }
 };
 
 interface Props {
@@ -29,17 +33,21 @@ export class ProfessionalExperience extends React.Component<Props> {
     super(props);
   }
 
-  humanDateDiff(date1: Date, date2: Date): string {
-    const moment1 = moment(date1);
-    const moment2 = moment(date2);
+  humanDateDiff(start: Date, end: Date | undefined): string {
+    if (!end) {
+      end = new Date();
+    }
 
-    const years = moment1.diff(moment2, 'year');
-    moment2.add(years, 'years');
+    const startMoment = moment(start);
+    const endMoment = moment(end);
 
-    const months = moment1.diff(moment2, 'months');
-    moment2.add(months, 'months');
+    const years = endMoment.diff(startMoment, 'year');
+    startMoment.add(years, 'years');
 
-    return `${years.toString()} ${lang.years[config.language]}${ 
+    const months = endMoment.diff(startMoment, 'months');
+    startMoment.add(months, 'months');
+
+    return `${years.toString()} ${lang.years[config.language]}${
       months > 0 ? ` ${months.toString()} ${lang.months[config.language]}` : ''
     }`;
   }
@@ -56,11 +64,13 @@ export class ProfessionalExperience extends React.Component<Props> {
           </SectionTitle>
           <SectionTitle badge={{}} size={4}>
             {moment(this.props.experience.startDate).format('MM/YYYY')} →{' '}
-            {moment(this.props.experience.endDate).format('MM/YYYY')}
+            {this.props.experience
+              .endDate ? moment(this.props.experience.endDate)
+              .format('MM/YYYY') : lang.today[config.language]}
             {' ('}
             {this.humanDateDiff(
-              this.props.experience.endDate,
-              this.props.experience.startDate
+              this.props.experience.startDate,
+              this.props.experience.endDate
             )}
             {')'}
           </SectionTitle>

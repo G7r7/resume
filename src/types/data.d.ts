@@ -44,7 +44,7 @@ export type ProfessionalExperience = {
   companyName: string;
   city: string;
   startDate: Date;
-  endDate: Date;
+  endDate?: Date;
   jobTitle: Record<languages, string>;
   description: Record<languages, string>;
   projects: Project[];
