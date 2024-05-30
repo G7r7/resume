@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     gap: nth($sizes, 1);
+    white-space: nowrap;
 }
 
 .tech-logo {

@@ -59,10 +59,10 @@ class TechnicalSkillCategory extends Component<TechnicalSkillCategoryProps> {
       if (programmingLanguages.length > 0) {
         return (
           <div className="vertical-group-container">
-            <SectionTitle size={4} badge={{}} fitContent={true}>
+            <SectionTitle size={4} badge={{}} centerText={true}>
               {this.props.category.name[config.language]}
             </SectionTitle>
-            <div>
+            <div className='technical-skills-grid'>
               {programmingLanguages
                 .sort((sk1, sk2) => (sk1.level < sk2.level ? 1 : -1))
                 .map((technicalSkill, index) => {

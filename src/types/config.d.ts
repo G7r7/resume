@@ -3,4 +3,5 @@
  */
 export type Config = {
   language: 'fr' | 'en';
+  showTechnicalSkillLevel: boolean;
 };
