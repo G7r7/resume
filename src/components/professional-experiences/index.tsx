@@ -24,7 +24,7 @@ export class ProfessionalExperiences extends React.Component {
           {lang.title[config.language]}
         </SectionTitle>
         <div className="vertical-group-container">
-          {data.profesionalExperiences.map((experience, index) => {
+          {data.professionalExperiences.map((experience, index) => {
             return (
               <ProfessionalExperience key={index} experience={experience} />
             );

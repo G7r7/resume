@@ -2,15 +2,15 @@ import { TechnologyCategory } from '../types/data';
 
 export const DEVTOOL: TechnologyCategory = {
   name: {
-    en: 'Development tool',
-    fr: 'Outil de développement',
+    en: 'Development tools',
+    fr: 'Outils de développement',
   },
 };
 
 export const PROGRAMMINGLANGUAGE: TechnologyCategory = {
   name: {
-    en: 'Programming language',
-    fr: 'Langage de programmation',
+    en: 'Programming languages',
+    fr: 'Langages de programmation',
   },
 };
 
@@ -23,28 +23,28 @@ export const WEBTECH: TechnologyCategory = {
 
 export const FRAMEWORK: TechnologyCategory = {
     name: {
-        en: 'Framework',
-        fr: 'Framework'
+        en: 'Frameworks',
+        fr: 'Frameworks'
     }
 }
 
 export const OPERATIONALTOOL: TechnologyCategory = {
   name: {
-    en: 'Operational tool',
-    fr: 'Outil opérationel',
+    en: 'Operational tools',
+    fr: 'Outils opérationnels',
   },
 };
 
 export const DATABASE: TechnologyCategory = {
   name: {
-    en: 'Database',
-    fr: 'Base de données',
+    en: 'Databases',
+    fr: 'Bases de données',
   },
 };
 
 export const OTHERTECH: TechnologyCategory = {
     name: {
-        en: 'Other',
-        fr: 'Autre'
+        en: 'Others',
+        fr: 'Autres'
     }
 }

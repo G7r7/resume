@@ -14,7 +14,7 @@ export type Data = {
     socials: Social[];
     text: Record<languages, string>;
   };
-  profesionalExperiences: ProfessionalExperience[];
+  professionalExperiences: ProfessionalExperience[];
   personalProjects: Project[];
   technicalSkills: TechnicalSkill[];
   studies: Study[];
@@ -68,7 +68,7 @@ type TechnologyCategory = {
 type Technology = {
   name: string;
   logo: ReactComponentElement;
-  category: TechnologyCategory
+  category: TechnologyCategory;
 };
 
 export type Concept = {
