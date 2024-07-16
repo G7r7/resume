@@ -31,6 +31,7 @@ export type Study = {
   school: {
     name: Record<languages, string>;
     city: string;
+    logo: ReactComponentElement;
   };
   diploma: {
     name: Record<languages, string>;

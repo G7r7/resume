@@ -22,19 +22,28 @@ export class Study extends React.Component<Props> {
         className="box study"
       >
         <div className="horizontal-group-container">
-          <SectionTitle logo={DIPLOMALogo} size={4}>
-            {this.props.study.diploma.name[config.language]}
-          </SectionTitle>
-          <SectionTitle badge={{}} size={4}>
-            {moment(this.props.study.startDate).format('YYYY')} -{' '}
-            {moment(this.props.study.endDate).format('YYYY')}
-          </SectionTitle>
-          <SectionTitle badge={{}} size={4}>
-            {this.props.study.school.name[config.language]}
-          </SectionTitle>
-          <SectionTitle badge={{}} size={4}>
-            {this.props.study.school.city}
-          </SectionTitle>
+          <img
+            className="school-logo"
+            src={this.props.study.school.logo}
+            alt=""
+          />
+          <div className="vertical-group-container">
+            <SectionTitle logo={DIPLOMALogo} size={4}>
+              {this.props.study.diploma.name[config.language]}
+            </SectionTitle>
+            <div className='horizontal-group-container'>
+              <SectionTitle badge={{}} size={4}>
+                {moment(this.props.study.startDate).format('YYYY')} -{' '}
+                {moment(this.props.study.endDate).format('YYYY')}
+              </SectionTitle>
+              <SectionTitle badge={{}} size={4}>
+                {this.props.study.school.name[config.language]}
+              </SectionTitle>
+              <SectionTitle badge={{}} size={4}>
+                {this.props.study.school.city}
+              </SectionTitle>
+            </div>
+          </div>
         </div>
       </div>
     );

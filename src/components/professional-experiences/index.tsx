@@ -12,7 +12,7 @@ type Words = 'title';
 const lang: Lang<Words> = {
   title: {
     en: 'Professional Experiences',
-    fr: 'Expériences professionelles',
+    fr: 'Expériences professionnelles et projets notables',
   },
 };
 

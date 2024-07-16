@@ -17,8 +17,8 @@ root.render(
       <PersonalDetails />
       <TechnicalSkills />
       <ProfessionalExperiences />
-      <PersonalProjects />
       <Studies />
+      <PersonalProjects />
     </div>
   </React.StrictMode>
 );

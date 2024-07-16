@@ -5,3 +5,7 @@
 .study {
   background-color: $color5;
 }
+
+.school-logo {
+  height: calc(nth($sizes, 8) * 2);
+}

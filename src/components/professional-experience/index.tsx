@@ -76,7 +76,7 @@ export class ProfessionalExperience extends React.Component<Props> {
           </SectionTitle>
         </div>
         <div>{this.props.experience.jobTitle[config.language]}</div>
-        <div>{this.props.experience.description[config.language]}</div>
+        <div><i>{this.props.experience.description[config.language]}</i></div>
         {this.props.experience.projects.map((project, index) => {
           return <Project key={index} project={project} />;
         })}
