@@ -21,12 +21,12 @@ export const WEBTECH: TechnologyCategory = {
   },
 };
 
-export const FRAMEWORK: TechnologyCategory = {
-    name: {
-        en: 'Frameworks',
-        fr: 'Frameworks'
-    }
-}
+export const LIBRARY: TechnologyCategory = {
+  name: {
+    en: 'Libraries',
+    fr: 'Librairies',
+  },
+};
 
 export const OPERATIONALTOOL: TechnologyCategory = {
   name: {
@@ -43,8 +43,8 @@ export const DATABASE: TechnologyCategory = {
 };
 
 export const OTHERTECH: TechnologyCategory = {
-    name: {
-        en: 'Others',
-        fr: 'Autres'
-    }
-}
+  name: {
+    en: 'Others',
+    fr: 'Autres',
+  },
+};

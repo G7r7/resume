@@ -9,7 +9,7 @@ import { SectionTitle } from '../commons/section-title';
 import TOOLSlogo from '../../assets/images/concepts/tools.svg';
 import {
   DEVTOOL,
-  FRAMEWORK,
+  LIBRARY,
   OPERATIONALTOOL,
   OTHERTECH,
   PROGRAMMINGLANGUAGE,
@@ -38,7 +38,7 @@ export class TechnicalSkills extends Component {
           <TechnicalSkillCategory category={WEBTECH} />
           <TechnicalSkillCategory category={DEVTOOL} />
           <TechnicalSkillCategory category={OPERATIONALTOOL} />
-          <TechnicalSkillCategory category={FRAMEWORK} />
+          <TechnicalSkillCategory category={LIBRARY} />
           <TechnicalSkillCategory category={OTHERTECH} />
         </div>
       </div>
@@ -62,7 +62,7 @@ class TechnicalSkillCategory extends Component<TechnicalSkillCategoryProps> {
             <SectionTitle size={4} badge={{}} centerText={true}>
               {this.props.category.name[config.language]}
             </SectionTitle>
-            <div className='technical-skills-grid'>
+            <div className="technical-skills-grid">
               {programmingLanguages
                 .sort((sk1, sk2) => (sk1.level < sk2.level ? 1 : -1))
                 .map((technicalSkill, index) => {

@@ -34,214 +34,243 @@ import { ReactComponent as CPPLogo } from '../assets/images/technologies/cpluspl
 import { ReactComponent as RASPBERRYPILogo } from '../assets/images/technologies/raspberrypi.svg';
 import { ReactComponent as PYTHONLogo } from '../assets/images/technologies/python.svg';
 import { ReactComponent as JAVALogo } from '../assets/images/technologies/java.svg';
-import { DATABASE, DEVTOOL, FRAMEWORK, OPERATIONALTOOL, OTHERTECH, PROGRAMMINGLANGUAGE, WEBTECH } from './technology-category';
+import { ReactComponent as BASHLogo } from '../assets/images/technologies/bash.svg';
+import { ReactComponent as CMAKELogo } from '../assets/images/technologies/cmake.svg';
+import { ReactComponent as GOOGLELogo } from '../assets/images/technologies/google.svg';
+import {
+  DATABASE,
+  DEVTOOL,
+  LIBRARY,
+  OPERATIONALTOOL,
+  OTHERTECH,
+  PROGRAMMINGLANGUAGE,
+  WEBTECH,
+} from './technology-category';
+
+export const BASH: Technology = {
+  name: 'Bash',
+  logo: BASHLogo,
+  category: DEVTOOL,
+};
 
 export const VSCODE: Technology = {
   name: 'Visual Studio Code',
   logo: VSCODELogo,
-  category: DEVTOOL
+  category: DEVTOOL,
 };
 
 export const UNITY: Technology = {
   name: 'Unity',
   logo: UNITYLogo,
-  category: FRAMEWORK
+  category: LIBRARY,
 };
 
 export const SOCKETIO: Technology = {
   name: 'Socket.io',
   logo: SOCKETIOLogo,
-  category: WEBTECH
+  category: WEBTECH,
 };
 
 export const SASS: Technology = {
   name: 'Sass',
   logo: SASSLogo,
-  category: WEBTECH
+  category: WEBTECH,
 };
 
 export const RUST: Technology = {
   name: 'Rust',
   logo: RUSTLogo,
-  category: PROGRAMMINGLANGUAGE
+  category: PROGRAMMINGLANGUAGE,
 };
 
 export const OPENGL: Technology = {
   name: 'OpenGL',
   logo: OPENGLLogo,
-  category: FRAMEWORK
+  category: LIBRARY,
+};
+
+export const GTEST: Technology = {
+  name: 'GoogleTest',
+  logo: GOOGLELogo,
+  category: LIBRARY,
+};
+
+export const CMAKE: Technology = {
+  name: 'CMake',
+  logo: CMAKELogo,
+  category: DEVTOOL,
 };
 
 export const MARKDOWN: Technology = {
   name: 'Markdown',
   logo: MARKDOWNLogo,
-  category: DEVTOOL
+  category: DEVTOOL,
 };
 
 export const LINUX: Technology = {
   name: 'Linux',
   logo: LINUXLogo,
-  category: DEVTOOL
+  category: DEVTOOL,
 };
 
 export const K3S: Technology = {
   name: 'K3S',
   logo: K3SLogo,
-  category: OPERATIONALTOOL
+  category: OPERATIONALTOOL,
 };
 
 export const HTML5: Technology = {
   name: 'HTML5',
   logo: HTML5Logo,
-  category: WEBTECH
+  category: WEBTECH,
 };
 
 export const GITHUB: Technology = {
   name: 'GitHub',
   logo: GITHUBLogo,
-  category: DEVTOOL
+  category: DEVTOOL,
 };
 
 export const GIT: Technology = {
   name: 'Git',
   logo: GITLogo,
-  category: DEVTOOL
+  category: DEVTOOL,
 };
 
 export const CSS3: Technology = {
   name: 'CSS3',
   logo: CSS3Logo,
-  category: WEBTECH
+  category: WEBTECH,
 };
 
 export const CSHARP: Technology = {
   name: 'C#',
   logo: CSHARPLogo,
-  category: PROGRAMMINGLANGUAGE
+  category: PROGRAMMINGLANGUAGE,
 };
 
 export const PODMAN: Technology = {
   name: 'Podman',
   logo: PODMANLogo,
-  category: OPERATIONALTOOL
+  category: OPERATIONALTOOL,
 };
 
 export const TS: Technology = {
   name: 'TypeScript',
   logo: TSLogo,
-  category: PROGRAMMINGLANGUAGE
+  category: PROGRAMMINGLANGUAGE,
 };
 
 export const PHP: Technology = {
   name: 'PHP',
   logo: PHPLogo,
-  category: PROGRAMMINGLANGUAGE
+  category: PROGRAMMINGLANGUAGE,
 };
 
 export const VUEJS: Technology = {
   name: 'Vue.js',
   logo: VueLogo,
-  category: WEBTECH
+  category: WEBTECH,
 };
 
 export const JS: Technology = {
   name: 'JavaScript',
   logo: JSLogo,
-  category: PROGRAMMINGLANGUAGE
+  category: PROGRAMMINGLANGUAGE,
 };
 
 export const MYSQL: Technology = {
   name: 'MySQL',
   logo: MYSQLLogo,
-  category: DATABASE
+  category: DATABASE,
 };
 
 export const NODE: Technology = {
   name: 'Node.js',
   logo: NodeLogo,
-  category: WEBTECH
+  category: WEBTECH,
 };
 
 export const POSTGRES: Technology = {
   name: 'PostgreSQL',
   logo: PostGreSQLLogo,
-  category: DATABASE
+  category: DATABASE,
 };
 
 export const GITLAB: Technology = {
   name: 'GitLab',
   logo: GitLabLogo,
-  category: DEVTOOL
+  category: DEVTOOL,
 };
 
 export const C: Technology = {
   name: 'C',
   logo: CLogo,
-  category: PROGRAMMINGLANGUAGE
+  category: PROGRAMMINGLANGUAGE,
 };
 
 export const CPP: Technology = {
   name: 'C++',
   logo: CPPLogo,
-  category: PROGRAMMINGLANGUAGE
+  category: PROGRAMMINGLANGUAGE,
 };
 
 export const K8S: Technology = {
   name: 'Kubernetes',
   logo: K8SLogo,
-  category: OPERATIONALTOOL
+  category: OPERATIONALTOOL,
 };
 
 export const DOCKER: Technology = {
   name: 'Docker',
   logo: DockerLogo,
-  category: OPERATIONALTOOL
+  category: OPERATIONALTOOL,
 };
 
 export const OPENAPI: Technology = {
   name: 'OpenAPI',
   logo: OPENAPILogo,
-  category: FRAMEWORK
+  category: WEBTECH,
 };
 
 export const JEST: Technology = {
   name: 'Jest',
   logo: JESTLogo,
-  category: WEBTECH
+  category: WEBTECH,
 };
 
 export const HELM: Technology = {
   name: 'Helm',
   logo: HELMLogo,
-  category: OPERATIONALTOOL
+  category: OPERATIONALTOOL,
 };
 
 export const REACT: Technology = {
   name: 'React',
   logo: REACTLogo,
-  category: WEBTECH
+  category: WEBTECH,
 };
 
 export const VR: Technology = {
   name: 'VR',
   logo: VRLogo,
-  category: OTHERTECH
+  category: OTHERTECH,
 };
 
 export const RASPBERRYPI: Technology = {
   name: 'Raspberry Pi',
   logo: RASPBERRYPILogo,
-  category: OTHERTECH
+  category: OTHERTECH,
 };
 
 export const JAVA: Technology = {
   name: 'Java',
   logo: JAVALogo,
-  category: PROGRAMMINGLANGUAGE
+  category: PROGRAMMINGLANGUAGE,
 };
 
 export const PYTHON: Technology = {
   name: 'Python',
   logo: PYTHONLogo,
-  category: PROGRAMMINGLANGUAGE
+  category: PROGRAMMINGLANGUAGE,
 };

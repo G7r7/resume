@@ -1,4 +1,29 @@
 {
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "cSpell.words": [
+    "activpart",
+    "Babyfoot",
+    "Copa",
+    "DEVOPSENGINEER",
+    "ektacom",
+    "EKTACOM",
+    "EMBEDEDDEVELOPMENT",
+    "GTEST",
+    "linkedin",
+    "LINKEDIN",
+    "OPENAPI",
+    "OPERATIONALTOOL",
+    "OPVHP",
+    "OTHERTECH",
+    "PROGRAMMINGLANGUAGE",
+    "RASPBERRYPI",
+    "Rullier",
+    "SYSTEMDEVELOPMENT",
+    "Teleportal",
+    "Tydeo",
+    "VUEJS",
+    "WEBDEVELOPMENT",
+    "WEBTECH"
+  ]
 }
