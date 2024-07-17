@@ -1,7 +1,13 @@
 @use './colors.scss' as colors;
-@use './assets/fonts/JetBrainsMono-2.304/style.scss'; 
+@use './assets/fonts/JetBrainsMono-2.304/style.scss';
 @use 'sass:list';
 @import './sizes.scss';
+
+@media print {
+  @page {
+    margin: 0;
+  }
+}
 
 $base-size: list.nth($sizes, 2);
 
