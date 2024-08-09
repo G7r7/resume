@@ -52,7 +52,7 @@ export type ProfessionalExperience = {
 };
 
 type Project = {
-  name: string;
+  name: Record<languages, string> | string;
   description: Record<languages, string>;
   type: ProjectType[];
   roles: Role[];

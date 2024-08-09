@@ -19,12 +19,12 @@ export class Project extends React.Component<Props> {
   render(): React.ReactNode {
     return (
       <div
-        key={this.props.project.name}
+        key={typeof this.props.project.name === 'string' ? this.props.project.name : this.props.project.name[config.language]}
         className="box project vertical-group-container"
       >
         <div className="horizontal-group-container">
           <SectionTitle badge={{ color: 3 }} size={4}>
-            {this.props.project.name}
+            {typeof this.props.project.name === 'string' ? this.props.project.name : this.props.project.name[config.language]}
           </SectionTitle>
           {this.props.project.type.map((t, index) => (
             <SectionTitle key={index} badge={{ color: t.color }} size={4}>
