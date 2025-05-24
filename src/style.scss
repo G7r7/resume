@@ -10,6 +10,12 @@
   html {
     background: none !important; /* Prevent background rendering when printing */
   }
+
+  .cv-container {
+    width: 21cm;
+    height: 29.7cm;
+    border-radius: 0!important;
+  }
 }
 
 $base-size: 0.6rem;
@@ -59,7 +65,6 @@ body {
   flex-direction: column;
   gap: $base-size;
   width: 794px; /* A4 width in pixels */
-  height: 1123px; /* A4 height in pixels */
   margin: 0 auto; /* Center horizontally */
   padding: $base-size; /* Add padding for better spacing */
   background: #f3c6c6; //#FFCAD4
