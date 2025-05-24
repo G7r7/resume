@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.scss';
+import { SectionTitle } from '../commons/section-title';
 
 interface Props {
   url: string;
@@ -10,12 +11,11 @@ interface Props {
 export class Link extends React.Component<Props> {
   render(): React.ReactNode {
     return (
-      <div className="link">
-        {this.props.logo ? <img src={this.props.logo} className="logo"/> : ''}
+      <SectionTitle logo={this.props.logo ? this.props.logo : undefined} badge={{color:'transparent'}}>
         <a href={this.props.url} target="_blank" rel="noreferrer">
           {this.props.text}
         </a>
-      </div>
+      </SectionTitle>
     );
   }
 }

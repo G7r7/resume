@@ -6,7 +6,7 @@ import './style.scss';
 import { data } from '../../data/data';
 import { TechnicalSkill } from '../technical-skill';
 import { SectionTitle } from '../commons/section-title';
-import TOOLSlogo from '../../assets/images/concepts/tools.svg';
+// import TOOLSlogo from '../../assets/images/concepts/tools.svg';
 import {
   DEVTOOL,
   LIBRARY,
@@ -30,7 +30,10 @@ export class TechnicalSkills extends Component {
   render(): React.ReactNode {
     return (
       <div className="box vertical-group-container">
-        <SectionTitle badge={{}} logo={TOOLSlogo}>
+        <SectionTitle
+          badge={{ enabled: true }}
+          // logo={TOOLSlogo}
+        >
           {lang.title[config.language]}
         </SectionTitle>
         <div className="technical-skills horizontal-group-container">
@@ -59,7 +62,7 @@ class TechnicalSkillCategory extends Component<TechnicalSkillCategoryProps> {
       if (programmingLanguages.length > 0) {
         return (
           <div className="vertical-group-container">
-            <SectionTitle size={4} badge={{}} centerText={true}>
+            <SectionTitle badge={{ enabled: true, color: "#FFB3AC" }} centerText={true}>
               {this.props.category.name[config.language]}
             </SectionTitle>
             <div className="technical-skills-grid">

@@ -37,6 +37,8 @@ import { ReactComponent as JAVALogo } from '../assets/images/technologies/java.s
 import { ReactComponent as BASHLogo } from '../assets/images/technologies/bash.svg';
 import { ReactComponent as CMAKELogo } from '../assets/images/technologies/cmake.svg';
 import { ReactComponent as GOOGLELogo } from '../assets/images/technologies/google.svg';
+import { ReactComponent as FLUTTERLogo } from '../assets/images/technologies/flutter.svg';
+import { ReactComponent as NESTJSLogo } from '../assets/images/technologies/nestjs.svg';
 import {
   DATABASE,
   DEVTOOL,
@@ -46,6 +48,7 @@ import {
   PROGRAMMINGLANGUAGE,
   WEBTECH,
 } from './technology-category';
+import { WEBDEVELOPMENT } from './project-types';
 
 export const BASH: Technology = {
   name: 'Bash',
@@ -273,4 +276,16 @@ export const PYTHON: Technology = {
   name: 'Python',
   logo: PYTHONLogo,
   category: PROGRAMMINGLANGUAGE,
+};
+
+export const FLUTTER: Technology = {
+  name: 'Flutter',
+  logo: FLUTTERLogo,
+  category: PROGRAMMINGLANGUAGE,
+};
+
+export const NESTJS: Technology = {
+  name: 'NestJS',
+  logo: NESTJSLogo,
+  category: WEBTECH,
 };

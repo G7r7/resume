@@ -1,12 +1,12 @@
 @use 'sass:list';
-@import '../../sizes.scss';
+@import '../../style.scss';
 
 .link {
   display: inline-flex;
   align-items: center;
-  gap: nth($sizes, 3);
+  gap: calc($base-size * 4);
 }
 
 .logo {
-  height: nth($sizes, 6);
+  height: calc($base-size * 4);
 }

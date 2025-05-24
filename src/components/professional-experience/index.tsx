@@ -6,6 +6,7 @@ import './style.scss';
 import { Project } from '../project';
 import { SectionTitle } from '../commons/section-title';
 import { Lang } from '../../types/lang';
+import { Link } from '../link';
 
 type Words = 'years' | 'months' | 'today';
 
@@ -59,10 +60,10 @@ export class ProfessionalExperience extends React.Component<Props> {
         className="box professional-experience vertical-group-container"
       >
         <div className="horizontal-group-container">
-          <SectionTitle logo={this.props.experience.logo} badge={{}} size={4}>
+          <SectionTitle logo={this.props.experience.logo}  badge={{enabled: true}}>
             {this.props.experience.companyName}
           </SectionTitle>
-          <SectionTitle badge={{}} size={4}>
+          <SectionTitle  badge={{enabled: true}}>
             {moment(this.props.experience.startDate).format('MM/YYYY')} →{' '}
             {this.props.experience
               .endDate ? moment(this.props.experience.endDate)
@@ -74,6 +75,7 @@ export class ProfessionalExperience extends React.Component<Props> {
             )}
             {')'}
           </SectionTitle>
+          { this.props.experience.companyWebsite ? <Link url={this.props.experience.companyWebsite} text={this.props.experience.companyWebsite} /> : null }
         </div>
         <div>{this.props.experience.jobTitle[config.language]}</div>
         <div><i>{this.props.experience.description[config.language]}</i></div>

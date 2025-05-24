@@ -1,7 +1,6 @@
-@use './colors.scss' as colors;
 @use './assets/fonts/JetBrainsMono-2.304/style.scss';
 @use 'sass:list';
-@import './sizes.scss';
+@import './assets/fonts/MontSerrat/style.scss';
 
 @media print {
   @page {
@@ -9,13 +8,16 @@
   }
 }
 
-$base-size: list.nth($sizes, 2);
+$base-size: 0.6rem;
 
 html {
   margin: 0;
+  padding: 0 !important;
   padding: $base-size;
-  background-color: white;
-  font-family: 'JetBrains Mono';
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+  background-attachment: fixed;
+  font-family: 'Montserrat', sans-serif;
+  color: #2C2C2C;
 }
 
 body {
@@ -24,18 +26,21 @@ body {
 }
 
 .box {
-  background: linear-gradient(90deg, colors.$color10, colors.$color9);
-  padding: $base-size;
+  background: linear-gradient(90deg, #FFF4F0, #FFF0F6);
+  padding: calc($base-size / 2);
   border-radius: $base-size;
-  border: 1px solid colors.$color1;
-  display: flex;
-  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 12px 40px rgba(0, 0, 0, 0.25);
+  }
 }
 
 .vertical-group-container {
   display: flex;
   flex-direction: column;
-  gap: $base-size;
+  gap: calc($base-size * 0.75);
 }
 
 .horizontal-group-container {
@@ -43,4 +48,17 @@ body {
   flex-direction: row;
   gap: $base-size;
   flex-wrap: wrap;
+}
+
+.cv-container {
+  display: flex;
+  flex-direction: column;
+  gap: $base-size;
+  width: 794px; /* A4 width in pixels */
+  margin: 0 auto; /* Center horizontally */
+  padding: $base-size; /* Add padding for better spacing */
+  background: 	#F3C6C6; //#FFCAD4
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: $base-size;
 }

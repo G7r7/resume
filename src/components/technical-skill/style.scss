@@ -1,8 +1,8 @@
 @use 'sass:list';
-@import '../../sizes.scss';
+@import '../../style.scss';
 
 .technical-skill {
   display: flex;
   align-items: center;
-  gap: nth($sizes, 1);
+  gap: $base-size;
 }

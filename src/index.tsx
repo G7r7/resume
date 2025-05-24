@@ -6,6 +6,7 @@ import { PersonalProjects } from './components/personal-projects';
 import { TechnicalSkills } from './components/technical-skills';
 import './style.scss';
 import { Studies } from './components/studies';
+import { AddtionalInformations } from './components/additional-informations';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -13,12 +14,13 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <div className="vertical-group-container">
+    <div className="cv-container">
       <PersonalDetails />
       <TechnicalSkills />
       <ProfessionalExperiences />
       <Studies />
       <PersonalProjects />
+      <AddtionalInformations />
     </div>
   </React.StrictMode>
 );

@@ -1,15 +1,14 @@
-@use '../../colors.scss' as colors;
 @use 'sass:list';
-@import '../../sizes.scss';
+@import '../../style.scss';
 
 .technical-skills {
-  gap: nth($sizes, 5) 
+  gap: calc($base-size / 2); 
 }
 
 .technical-skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: nth($sizes, 5);
-  grid-row-gap: nth($sizes, 1);
+  grid-column-gap: calc($base-size / 1);
+  grid-row-gap: calc($base-size / 2);
   width: min-content;
 }

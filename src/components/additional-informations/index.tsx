@@ -3,20 +3,18 @@ import { Lang } from '../../types/lang';
 import { data } from '../../data/data';
 import { config } from '../../data/config';
 import './style.scss';
-// import PERSONALWORKLogo from '../../assets/images/concepts/personal-work.svg';
 import { SectionTitle } from '../commons/section-title';
-import { Project } from '../project';
 
 type Words = 'title';
 
 const lang: Lang<Words> = {
-  title: {
-    en: 'Personal projects',
-    fr: 'Projets personnels',
-  },
+title: {
+    fr: 'Informations complémentaires',
+    en: 'Additional Information',
+    },
 };
 
-export class PersonalProjects extends React.Component {
+export class AddtionalInformations extends React.Component {
   render(): React.ReactNode {
     return (
       <div className="box personal-projects vertical-group-container">
@@ -25,9 +23,11 @@ export class PersonalProjects extends React.Component {
         >
           {lang.title[config.language]}
         </SectionTitle>
-        <div className="vertical-group-container">
-          {data.personalProjects.map((project, index) => {
-            return <Project key={index} project={project} />;
+        <div className="horizontal-group-container">
+          {data.additionalInformations.map((additionalInformation, index) => {
+            return <SectionTitle key={index} badge={{color: 'transparent'}}>
+                {additionalInformation.name[config.language]}
+            </SectionTitle>;
           })}
         </div>
       </div>

@@ -1,13 +1,13 @@
 @use 'sass:list';
-@import '../../sizes.scss';
+@import '../../style.scss';
 
 .technology {
     display: flex;
     align-items: center;
-    gap: nth($sizes, 1);
+    gap: calc($base-size / 3);
     white-space: nowrap;
 }
 
 .tech-logo {
-    height: nth($sizes, 5);
+    height: $base-size;
 }

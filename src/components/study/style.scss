@@ -1,11 +1,18 @@
 @use 'sass:list';
-@import '../../colors.scss';
-@import '../../sizes.scss';
+@import '../../style.scss';
 
 .study {
-  background-color: $color5;
+  // background-color: $color5;
+}
+
+.school-logo-container {
+  display: flex;
+  // width: $base-size;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
 }
 
 .school-logo {
-  height: calc(nth($sizes, 8) * 2);
+  height: $base-size * 3;
 }

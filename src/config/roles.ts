@@ -27,3 +27,10 @@ export const ADMIN: Role = {
     fr: 'Administrateur',
   },
 };
+
+export const TESTER: Role = {
+  name: {
+    en: 'Tester',
+    fr: 'Testeur'
+  }
+}

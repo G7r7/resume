@@ -19,29 +19,31 @@ export class Project extends React.Component<Props> {
   render(): React.ReactNode {
     return (
       <div
-        key={this.props.project.name}
+        key={typeof this.props.project.name === 'string' ? this.props.project.name : this.props.project.name[config.language]}
         className="box project vertical-group-container"
       >
         <div className="horizontal-group-container">
-          <SectionTitle badge={{ color: 3 }} size={4}>
-            {this.props.project.name}
+          <SectionTitle badge={{enabled: true, color: '#FFDCDC'}}>
+            {typeof this.props.project.name === 'string' ? this.props.project.name : this.props.project.name[config.language]}
           </SectionTitle>
           {this.props.project.type.map((t, index) => (
-            <SectionTitle key={index} badge={{ color: t.color }} size={4}>
+            <SectionTitle badge={{enabled: true, color: '#FFE5B4'}} key={index}>
               {t.name[config.language]}
             </SectionTitle>
           ))}
           {this.props.project.technologies.map((technology, index) => {
             return (
-              <SectionTitle key={index} size={4} badge={{ color: 10 }}>
+              <SectionTitle badge={{enabled: true, color: '#FFF0C9'}} key={index}>
                 <Technology technology={technology} key={index} />
               </SectionTitle>
             );
           })}
         </div>
-        <div>
-          <i>{this.props.project.description[config.language]}</i>
-        </div>
+        { this.props.project.description[config.language] ?
+          <div>
+            <i>{this.props.project.description[config.language]}</i>
+          </div> : null
+        }
         {/* {(() => {
           if (this.props.project.roles) { return (
             <div className="horizontal-group-container">
@@ -57,7 +59,7 @@ export class Project extends React.Component<Props> {
         })()} */}
         {this.props.project.tasks
           ? this.props.project.tasks.map((task, index) => {
-              return <div key={index}>{'• ' + task[config.language]}</div>;
+              return <div style={{color: "#5F5F5F"}} key={index}>{'• ' + task[config.language]}</div>;
             })
           : null}
         {(() => {

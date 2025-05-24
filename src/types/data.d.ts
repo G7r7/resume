@@ -13,11 +13,13 @@ export type Data = {
     email: string;
     socials: Social[];
     text: Record<languages, string>;
+    location?: string;
   };
   professionalExperiences: ProfessionalExperience[];
   personalProjects: Project[];
   technicalSkills: TechnicalSkill[];
   studies: Study[];
+  additionalInformations: Concept[]
 };
 
 export type Social = {
@@ -31,7 +33,7 @@ export type Study = {
   school: {
     name: Record<languages, string>;
     city: string;
-    logo: ReactComponentElement;
+    logo?: ReactComponentElement;
   };
   diploma: {
     name: Record<languages, string>;
@@ -43,6 +45,7 @@ export type Study = {
 export type ProfessionalExperience = {
   logo?: ReactComponentElement;
   companyName: string;
+  companyWebsite?: string;
   city: string;
   startDate: Date;
   endDate?: Date;
@@ -52,7 +55,7 @@ export type ProfessionalExperience = {
 };
 
 type Project = {
-  name: string;
+  name: Record<languages, string> | string;
   description: Record<languages, string>;
   type: ProjectType[];
   roles: Role[];

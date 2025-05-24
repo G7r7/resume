@@ -22,28 +22,32 @@ export class Study extends React.Component<Props> {
         className="box study"
       >
         <div className="horizontal-group-container">
-          <img
-            className="school-logo"
-            src={this.props.study.school.logo}
-            alt=""
-          />
           <div className="vertical-group-container">
-            <SectionTitle logo={DIPLOMALogo} size={4}>
+            <SectionTitle logo={DIPLOMALogo} badge={{color: 'transparent'}}>
               {this.props.study.diploma.name[config.language]}
             </SectionTitle>
-            <div className='horizontal-group-container'>
-              <SectionTitle badge={{}} size={4}>
+            <div className="horizontal-group-container">
+              <SectionTitle badge={{ enabled: true }}>
                 {moment(this.props.study.startDate).format('YYYY')} -{' '}
                 {moment(this.props.study.endDate).format('YYYY')}
               </SectionTitle>
-              <SectionTitle badge={{}} size={4}>
+              <SectionTitle badge={{ enabled: true }}>
                 {this.props.study.school.name[config.language]}
               </SectionTitle>
-              <SectionTitle badge={{}} size={4}>
+              <SectionTitle badge={{ enabled: true }}>
                 {this.props.study.school.city}
               </SectionTitle>
             </div>
           </div>
+          {this.props.study.school.logo ? (
+            <div className="school-logo-container">
+              <img
+                className="school-logo"
+                src={this.props.study.school.logo}
+                alt=""
+              />
+            </div>
+          ) : null}
         </div>
       </div>
     );

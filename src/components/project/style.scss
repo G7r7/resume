@@ -1,7 +1,6 @@
 @use 'sass:list';
-@import '../../colors.scss';
-@import '../../sizes.scss';
+@import '../../style.scss';
 
 .project {
-  background-color: $color5;
+  gap: calc($base-size / 3)!important;
 }

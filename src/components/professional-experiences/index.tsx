@@ -5,7 +5,7 @@ import { config } from '../../data/config';
 import './style.scss';
 import { ProfessionalExperience } from '../professional-experience';
 import { SectionTitle } from '../commons/section-title';
-import WORKLogo from '../../assets/images/concepts/work.svg';
+// import WORKLogo from '../../assets/images/concepts/work.svg';
 
 type Words = 'title';
 
@@ -20,7 +20,9 @@ export class ProfessionalExperiences extends React.Component {
   render(): React.ReactNode {
     return (
       <div className="box professional-experiences vertical-group-container">
-        <SectionTitle logo={WORKLogo} badge={{}}>
+        <SectionTitle 
+        // logo={WORKLogo}
+        badge={{enabled: true}}>
           {lang.title[config.language]}
         </SectionTitle>
         <div className="vertical-group-container">

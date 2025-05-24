@@ -6,7 +6,8 @@ import '../../style.scss';
 import './style.scss';
 import { Link } from '../link';
 import { SectionTitle } from '../commons/section-title';
-import NAMELogo from '../../assets/images/concepts/name.svg';
+// import NAMELogo from '../../assets/images/concepts/name.svg';
+import LOCATIONLogo from '../../assets/images/concepts/location.svg';
 import PHOTO from '../../data/photo.jpg';
 
 type Words = 'title' | 'firstName' | 'lastName' | 'phone' | 'email';
@@ -38,29 +39,36 @@ export class PersonalDetails extends React.Component {
   render(): React.ReactNode {
     return (
       <div className="box personal-details vertical-group-container">
-        <SectionTitle logo={NAMELogo} badge={{}}>
+        <SectionTitle
+        // logo={NAMELogo}
+        badge={{enabled: true}}> 
+        {/* #FFB3AC */}
           {lang.title[config.language]}
         </SectionTitle>
         <div
           className="horizontal-group-container"
           style={{ justifyContent: 'space-between' }}
         >
-          <div className="vertical-group-container">
+          <div className="vertical-group-container" style={{width: "85%"}}>
+            <div style={{whiteSpace: "break-spaces"}}>{data.personalDetails.text[config.language]}</div>
             <div>
-              {lang.firstName[config.language]} {data.personalDetails.firstName}
+              {data.personalDetails.firstName}{' '}
+              {new String(data.personalDetails.lastName).toUpperCase()}
+              {' - '}
+              {data.personalDetails.phone}
+              {' - '}
+              <a
+                href={'mailto:' + data.personalDetails.email}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {data.personalDetails.email}
+              </a>
             </div>
+            { data.personalDetails.location ? 
+              <SectionTitle logo={LOCATIONLogo} badge={{enabled: false, color: 'transparent'}} >{data.personalDetails.location}</SectionTitle> : null
+            }
             <div>
-              {lang.lastName[config.language]} {data.personalDetails.lastName}
-            </div>
-            <div>
-              {lang.phone[config.language]} {data.personalDetails.phone}
-            </div>
-            <div>
-              {lang.email[config.language]}{' '}
-              <Link
-                url={'mailto:' + data.personalDetails.email}
-                text={data.personalDetails.email}
-              />
             </div>
             {data.personalDetails.socials.map((social, index) => {
               return (
@@ -73,8 +81,15 @@ export class PersonalDetails extends React.Component {
               );
             })}
           </div>
-          <div></div>
-          <img className="details-photo" src={PHOTO} />
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+            }}
+          >
+            <img className="details-photo" src={PHOTO} />
+          </div>
         </div>
       </div>
     );
