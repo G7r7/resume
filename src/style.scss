@@ -6,6 +6,10 @@
   @page {
     margin: 0;
   }
+
+  html {
+    background: none !important; /* Prevent background rendering when printing */
+  }
 }
 
 $base-size: 0.6rem;
@@ -17,7 +21,7 @@ html {
   background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
   background-attachment: fixed;
   font-family: 'Montserrat', sans-serif;
-  color: #2C2C2C;
+  color: #2c2c2c;
 }
 
 body {
@@ -26,7 +30,7 @@ body {
 }
 
 .box {
-  background: linear-gradient(90deg, #FFF4F0, #FFF0F6);
+  background: linear-gradient(90deg, #fff4f0, #fff0f6);
   padding: calc($base-size / 2);
   border-radius: $base-size;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
@@ -55,9 +59,10 @@ body {
   flex-direction: column;
   gap: $base-size;
   width: 794px; /* A4 width in pixels */
+  height: 1123px; /* A4 height in pixels */
   margin: 0 auto; /* Center horizontally */
   padding: $base-size; /* Add padding for better spacing */
-  background: 	#F3C6C6; //#FFCAD4
+  background: #f3c6c6; //#FFCAD4
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-size: $base-size;
