@@ -9,11 +9,11 @@ export type Data = {
   personalDetails: {
     firstName: string;
     lastName: string;
-    phone: string;
+    phone: Record<languages, string>;
     email: string;
     socials: Social[];
     text: Record<languages, string>;
-    location?: string;
+    location?: Record<languages, string>;
   };
   professionalExperiences: ProfessionalExperience[];
   personalProjects: Project[];

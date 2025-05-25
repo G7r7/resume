@@ -55,7 +55,7 @@ export class PersonalDetails extends React.Component {
               {data.personalDetails.firstName}{' '}
               {new String(data.personalDetails.lastName).toUpperCase()}
               {' - '}
-              {data.personalDetails.phone}
+              {data.personalDetails.phone[config.language]}
               {' - '}
               <a
                 href={'mailto:' + data.personalDetails.email}
@@ -66,7 +66,7 @@ export class PersonalDetails extends React.Component {
               </a>
             </div>
             { data.personalDetails.location ? 
-              <SectionTitle logo={LOCATIONLogo} badge={{enabled: false, color: 'transparent'}} >{data.personalDetails.location}</SectionTitle> : null
+              <SectionTitle logo={LOCATIONLogo} badge={{enabled: false, color: 'transparent'}} >{data.personalDetails.location[config.language]}</SectionTitle> : null
             }
             <div>
             </div>
